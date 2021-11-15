@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="KGU-JSP-201713919:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/KGU_JSP_201713919_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="KGU-JSP-201713919/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="KGU-JSP-201713919" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
