@@ -19,7 +19,7 @@ public class Controller extends HttpServlet {
         properties.load(fileInputStream);
         fileInputStream.close();
         try{
-            Class<?> url = Class.forName(properties.getProperty(request.getRequestURI().substring(request.getContextPath().length())));
+            Class<?> url = Class.forName(properties.getProperty(request.getRequestURI()));
             action = (Action) url.newInstance();
             try {
                 forward = action.execute(request, response); //Action클래스를 실행한 후, 결과값을 forward 변수에 담습니다.
