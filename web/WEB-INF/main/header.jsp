@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-8 col-sm-8">
                 <div class="left-content">
-                    <p>This is an educational <em>HTML CSS</em> template by TemplateMo website.</p>
+                    <p>경기대학교 <em>AI컴퓨터공학부</em> 차세대 홈페이지</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-4">
@@ -35,24 +35,46 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        Edu Meeting
+                    <a href="main.kgu" class="logo">
+                        경기대학교 AI컴퓨터공학부
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                        <li><a href="meetings.html">Meetings</a></li>
-                        <li class="scroll-to-section"><a href="#apply">Apply Now</a></li>
                         <li class="has-sub">
-                            <a href="javascript:void(0)">Pages</a>
+                            <a href="javascript:void(0)">학과소개</a>
                             <ul class="sub-menu">
-                                <li><a href="meetings.html">Upcoming Meetings</a></li>
-                                <li><a href="meeting-details.html">Meeting Details</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=41">학과소개</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=42">연혁</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=42">교육환경</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=42">교육목표</a></li>
+                            </ul>
+                        </li>                        <li class="has-sub">
+                            <a href="javascript:void(0)">교육활동</a>
+                            <ul class="sub-menu">
+                                <li><a href="bbs.kgu?mode=list&num=41">교육과정</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=42">학습활동</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=42">동아리소개</a></li>
                             </ul>
                         </li>
-                        <li class="scroll-to-section"><a href="#courses">Courses</a></li>
-                        <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">구성원</a>
+                            <ul class="sub-menu">
+                                <li><a href="bbs.kgu?mode=list&num=41">교수소개</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=42">연구실</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">학과알림</a>
+                            <ul class="sub-menu">
+                                <li><a href="bbs.kgu?mode=list&num=41">전체공지</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=42">학과공지</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=43">수업공지</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=44">취업공지</a></li>
+                            </ul>
+                        </li>
+                        <li class="scroll-to-section"><a href="#courses">신청하기</a></li>
+                        <li class="scroll-to-section"><a href="#contact">웹진</a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
