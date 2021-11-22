@@ -19,10 +19,8 @@
             <div class="col-lg-4 col-sm-4">
                 <div class="right-icons">
                     <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google"></i> 로그인(구글)</a></li>
+                        <li><a href="#"><i class="fa fa-sign-in"></i> 로그인(일반)</a></li>
                     </ul>
                 </div>
             </div>
