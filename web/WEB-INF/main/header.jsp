@@ -73,8 +73,23 @@
                                 <li><a href="bbs.kgu?mode=list&num=44">취업공지</a></li>
                             </ul>
                         </li>
-                        <li class="scroll-to-section"><a href="#courses">신청하기</a></li>
-                        <li class="scroll-to-section"><a href="#contact">웹진</a></li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">신청하기</a>
+                            <ul class="sub-menu">
+                                <li><a href="bbs.kgu?mode=list&num=41">신청 및 접수</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=42">졸업논문</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=43">학과 자료실</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=44">사물함 신청</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">웹진</a>
+                            <ul class="sub-menu">
+                                <li><a href="bbs.kgu?mode=list&num=41">학과 소식</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=42">우수 작품전</a></li>
+                                <li><a href="bbs.kgu?mode=list&num=43">수상 소식</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
