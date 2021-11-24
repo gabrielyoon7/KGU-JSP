@@ -19,8 +19,7 @@
             <div class="col-lg-4 col-sm-4">
                 <div class="right-icons">
                     <ul>
-                        <li><a href="#"><i class="fa fa-google"></i> 로그인(구글)</a></li>
-                        <li><a href="#"><i class="fa fa-sign-in"></i> 로그인(일반)</a></li>
+                        <li><a href="loginPage.kgu"><i class="fa fa-sign-in"></i> 로그인</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,7 +35,7 @@
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="main.kgu" class="logo">
-                        경기대학교 AI컴퓨터공학부
+                        컴퓨터공학전공
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->

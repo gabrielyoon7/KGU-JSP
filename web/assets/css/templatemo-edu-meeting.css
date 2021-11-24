@@ -979,6 +979,12 @@ section.upcoming-meetings .categories .main-button-red a {
   border-bottom-left-radius: 20px;
 }
 
+.card{
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+}
+
 .meeting-item .down-content .date {
   float: left;
   text-align: center;
