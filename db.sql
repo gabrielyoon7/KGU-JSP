@@ -13,5 +13,29 @@ CREATE TABLE user(
                      `gender` VARCHAR (5),
                      `phone` VARCHAR (20),
                      `type` VARCHAR (10) NOT NULL,
+                     `major` VARCHAR (20) NOT NULL,
                      PRIMARY KEY (`oid`)
+);
+
+CREATE TABLE usertype(
+                         `type_name` varchar(45) NOT NULL,
+                         `board_level` int NOT NULL,
+                         `for_header` varchar(45) NOT NULL,
+                         PRIMARY KEY(`type_name`)
+);
+
+INSERT INTO usertype(type_name,board_level,for_header) VALUE('홈페이지관리자', '0', '관리자');
+INSERT INTO usertype(type_name,board_level,for_header) VALUE('교수', '1', '교수');
+INSERT INTO usertype(type_name,board_level,for_header) VALUE('조교', '1', '조교');
+INSERT INTO usertype(type_name,board_level,for_header) VALUE('학부생', '2', '학생');
+INSERT INTO usertype(type_name,board_level,for_header) VALUE('학부모', '3', '기타');
+INSERT INTO usertype(type_name,board_level,for_header) VALUE('입학예정자', '3', '기타');
+INSERT INTO usertype(type_name,board_level,for_header) VALUE('기타', '3', '기타');
+
+CREATE TABLE major(
+                      `oid`  INT(10) NOT NULL AUTO_INCREMENT,
+                      `code` VARCHAR (30) NOT NULL,
+                      `major` VARCHAR (30) NOT NULL,
+                      `color` VARCHAR (20) NOT NULL,
+                      PRIMARY KEY (`oid`)
 );

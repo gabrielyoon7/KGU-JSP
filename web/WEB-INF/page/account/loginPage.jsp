@@ -93,3 +93,50 @@
         </div>
     </div>
 </div>
+
+
+
+<script>
+
+    $(document).ready(function () {
+        makeHeaderProfile(); //profile 제작
+    })
+
+    function makeHeaderProfile() {
+        var user =<%=user%>;
+        var type=<%=type%>;
+        if (user != null) {
+            $('#profileName').html(user.name+'('+type.for_header+')');
+            $('#profileMajor').html(user.major);
+            if(user.google_img==null){
+                $('#profilePicture').html("<h3><i class=\"bi bi-person-circle\"></i></h3>");
+            }
+            else {
+                $('#profilePicture').html("<img src='"+user.google_img+"'>");
+            }
+            $('#profileHello').html('안녕하세요, '+user.name+'님!')
+        }
+    }
+
+
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+            window.location.href = 'logout.kgu';
+        });
+    }
+
+</script>
+
+<%--구글 로그아웃 관련 설정 시작. 절대 건들지 마세요.--%>
+<script>
+    //절대 건들지 마세요. (위치 수정 금지)
+    function onLoad() {
+        gapi.load('auth2', function () {
+            gapi.auth2.init();
+        });
+    }
+</script>
+<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+<%--구글 로그아웃 관련 설정 끝 --%>
