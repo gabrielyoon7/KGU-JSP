@@ -31,7 +31,7 @@
 
             }
             else if (xhr.responseText == 'register'){
-                window.location.href = 'signup.kgu'
+                window.location.href = 'signupPage.kgu'
             }
             else {
                 alert("잘못된 정보");

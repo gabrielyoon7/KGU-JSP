@@ -35,8 +35,8 @@
         <c:when test="${jsp == '\"loginPage\"'}">
             <%@include file="/WEB-INF/page/account/loginPage.jsp" %>
         </c:when>
-        <c:when test="${jsp == '\"signup\"'}">
-            <%@include file="/WEB-INF/page/account/signup.jsp" %>
+        <c:when test="${jsp == '\"signupPage\"'}">
+            <%@include file="/WEB-INF/page/account/signupPage.jsp" %>
         </c:when>
 
         <%--            bbs--%>

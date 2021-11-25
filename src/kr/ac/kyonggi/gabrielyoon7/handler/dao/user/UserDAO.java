@@ -71,5 +71,18 @@ public class UserDAO {
             return null;
     }
 
+    public void addUser(String text) {
+//        System.out.println(text);
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            queryRunner.update(conn,text);
+        } catch(SQLException se) {
+            se.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+    }
+
 
 }

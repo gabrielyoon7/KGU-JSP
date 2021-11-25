@@ -6,7 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%
+    String user =  (String)session.getAttribute("user");
+%>
 <!-- Sub Header -->
 <div class="sub-header">
     <div class="container">
@@ -21,9 +23,7 @@
             <div>
 <%--            <div class="col-lg-4 col-sm-4">--%>
                 <div class="right-icons">
-                    <ul>
-                        <li><a href="loginPage.kgu"><i class="fa fa-sign-in"></i> 로그인</a></li>
-                    </ul>
+                    <ul id="loginInfo"></ul>
                 </div>
             </div>
         </div>
@@ -103,3 +103,20 @@
     </div>
 </header>
 <!-- ***** Header Area End ***** -->
+<script>
+    $(document).ready(function () {
+        makeLoginInfo();
+    })
+    function makeLoginInfo(){
+        let text = '';
+        let user = <%=user%>;
+        let loginInfo = $('#loginInfo');
+        if(user == null){
+            text+='<li><a href="loginPage.kgu"><i class="fa fa-sign-in"></i> 로그인</a></li>'
+        }
+        else {
+            text+='<li><a href="logout.kgu"><i class="fa fa-sign-in"></i> 로그아웃</a></li>'
+        }
+        loginInfo.append(text);
+    }
+</script>
