@@ -10,13 +10,16 @@
 <!-- Sub Header -->
 <div class="sub-header">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-sm-8">
+        <div class="d-flex justify-content-between">
+<%--        <div class="row">--%>
+            <div>
+<%--            <div class="col-lg-8 col-sm-8">--%>
                 <div class="left-content">
-                    <p>경기대학교 <em>AI컴퓨터공학부</em> 차세대 홈페이지</p>
+                    <p><span>경기대학교</span> <em>AI컴퓨터공학부</em> <span>차세대 홈페이지</span></p>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-4">
+            <div>
+<%--            <div class="col-lg-4 col-sm-4">--%>
                 <div class="right-icons">
                     <ul>
                         <li><a href="loginPage.kgu"><i class="fa fa-sign-in"></i> 로그인</a></li>

@@ -1818,12 +1818,12 @@ responsive
 
 @media (max-width: 767px) {
 
-  .sub-header .left-content p {
+  .sub-header .left-content p span {
     display: none;
   }
 
   .sub-header .right-icons {
-    text-align: center;
+    /*text-align: center;*/
   }
 
   .main-nav .nav .sub-menu {
