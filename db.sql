@@ -42,3 +42,32 @@ CREATE TABLE major(
 );
 
 INSERT INTO major(oid,code,major,color) VALUE(1, 'main', 'AI컴퓨터공학부','#');
+INSERT INTO major(oid,code,major,color) VALUE(2, 'cs', '컴퓨터공학전공','#');
+INSERT INTO major(oid,code,major,color) VALUE(3, 'ai', '인공지능전공','#');
+
+CREATE TABLE slider(
+                       `id` INT(10) NOT NULL AUTO_INCREMENT,
+                       `slider_img` VARCHAR(100) DEFAULT NULL,
+                       `slider_major` VARCHAR(100) DEFAULT NULL,
+                       PRIMARY KEY (`id`)
+);
+
+INSERT INTO slider(id,slider_img,slider_major) VALUE(1, '/assets/images/slider/slider_img1.jpg', 'main');
+INSERT INTO slider(id,slider_img,slider_major) VALUE(2, '/assets/images/slider/slider_img2.jpg', 'main');
+INSERT INTO slider(id,slider_img,slider_major) VALUE(3, '/assets/images/slider/slider_img3.jpg', 'main');
+
+CREATE TABLE banner(
+                       `id` INT(10) NOT NULL AUTO_INCREMENT,
+                       `title` VARCHAR(100) DEFAULT NULL,
+                       `description` VARCHAR(100) DEFAULT NULL,
+                       `link` VARCHAR(100) DEFAULT NULL,
+                       PRIMARY KEY (`id`)
+);
+
+INSERT INTO banner(id,title,description,link) VALUE(1, 'SWAIG', '설명1', 'main.kgu?major=main');
+INSERT INTO banner(id,title,description,link) VALUE(2, 'KUTIS', '설명2', 'https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp');
+INSERT INTO banner(id,title,description,link) VALUE(3, 'LMS', '설명3', 'https://lms.kyonggi.ac.kr/');
+INSERT INTO banner(id,title,description,link) VALUE(4, 'Facebook', '설명4', 'https://www.facebook.com/kgucs/');
+INSERT INTO banner(id,title,description,link) VALUE(5, '소프트웨어중심대학사업단', '설명5', 'https://swuniv.kyonggi.ac.kr/introduction/organization');
+INSERT INTO banner(id,title,description,link) VALUE(6, '콘텐츠융합소프트웨어연구소', '설명6', 'https://sites.google.com/kyonggi.ac.kr/ccsri');
+
