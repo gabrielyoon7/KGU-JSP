@@ -1,6 +1,5 @@
-package kr.ac.kyonggi.gabrielyoon7.handler.page;
+package kr.ac.kyonggi.gabrielyoon7.handler.action.page;
 
-import com.google.gson.Gson;
 import kr.ac.kyonggi.gabrielyoon7.common.controller.Action;
 
 import javax.servlet.http.HttpServletRequest;

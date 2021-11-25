@@ -8,6 +8,7 @@ CREATE TABLE user(
                      `google_email` VARCHAR (100) NOT NULL,
                      `google_image_url` VARCHAR (100) DEFAULT NULL,
                      `google_name` VARCHAR (100) DEFAULT NULL,
+                     `univ_id` VARCHAR (20) NOT NULL,
                      `name` VARCHAR (20) NOT NULL,
                      `birthday` DATE,
                      `gender` VARCHAR (5),
@@ -16,6 +17,7 @@ CREATE TABLE user(
                      `major` VARCHAR (20) NOT NULL,
                      PRIMARY KEY (`oid`)
 );
+INSERT INTO user(oid,google_id,google_email,google_image_url,google_name,univ_id,name,birthday,gender,phone,type,major) VALUE(1,'102261805363448965606','gabrielyoon7@kyoggi.ac.kr','#','윤주현','201713919','윤주현','1996-03-25','남','010-4413-5698','학부생','cs');
 
 CREATE TABLE usertype(
                          `type_name` varchar(45) NOT NULL,
@@ -39,3 +41,5 @@ CREATE TABLE major(
                       `color` VARCHAR (20) NOT NULL,
                       PRIMARY KEY (`oid`)
 );
+
+INSERT INTO major(oid,code,major,color) VALUE(1, 'main', 'AI컴퓨터공학부','#');

@@ -1,4 +1,4 @@
-package kr.ac.kyonggi.gabrielyoon7.handler.account;
+package kr.ac.kyonggi.gabrielyoon7.handler.action.account;
 
 import kr.ac.kyonggi.gabrielyoon7.common.controller.Action;
 

@@ -1,4 +1,4 @@
-package kr.ac.kyonggi.gabrielyoon7.handler.page.bbs;
+package kr.ac.kyonggi.gabrielyoon7.handler.action.page.bbs;
 
 import com.google.gson.Gson;
 import kr.ac.kyonggi.gabrielyoon7.common.controller.Action;

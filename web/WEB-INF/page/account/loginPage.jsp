@@ -25,7 +25,7 @@
         xhr.open('POST', 'googleLogin.kgu');
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onload = function () {
-            // console.log('Signed in as: ' + xhr.responseText);
+            console.log('Signed in as: ' + xhr.responseText);
             if (xhr.responseText == 'success'){
                 window.location.href = 'main.kgu';
 
@@ -103,19 +103,7 @@
     })
 
     function makeHeaderProfile() {
-        var user =<%=user%>;
-        var type=<%=type%>;
-        if (user != null) {
-            $('#profileName').html(user.name+'('+type.for_header+')');
-            $('#profileMajor').html(user.major);
-            if(user.google_img==null){
-                $('#profilePicture').html("<h3><i class=\"bi bi-person-circle\"></i></h3>");
-            }
-            else {
-                $('#profilePicture').html("<img src='"+user.google_img+"'>");
-            }
-            $('#profileHello').html('안녕하세요, '+user.name+'님!')
-        }
+
     }
 
 
