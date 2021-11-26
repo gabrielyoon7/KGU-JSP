@@ -9,7 +9,7 @@
 <%
     String slider = (String) request.getAttribute("slider");
     String majorList = (String) request.getAttribute("majorList");
-    String bannerList = (String) request.getAttribute("bannerList");
+//    String bannerList = (String) request.getAttribute("bannerList");
 %>
 
 

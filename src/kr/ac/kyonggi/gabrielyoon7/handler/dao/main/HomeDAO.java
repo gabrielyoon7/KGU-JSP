@@ -6,6 +6,8 @@ import kr.ac.kyonggi.gabrielyoon7.common.sql.Config;
 import kr.ac.kyonggi.gabrielyoon7.handler.dao.user.UserDAO;
 //import kr.ac.kyonggi.gabrielyoon7.handler.dto.main.BannerDTO;
 import kr.ac.kyonggi.gabrielyoon7.handler.dto.main.MajorDTO;
+import kr.ac.kyonggi.gabrielyoon7.handler.dto.main.MenuPageDTO;
+import kr.ac.kyonggi.gabrielyoon7.handler.dto.main.MenuTabDTO;
 import kr.ac.kyonggi.gabrielyoon7.handler.dto.main.SliderDTO;
 import org.apache.commons.dbutils.DbUtils;
 import org.apache.commons.dbutils.QueryRunner;
@@ -71,6 +73,38 @@ public class HomeDAO {
         }
         Gson gson = new Gson();
         ArrayList<MajorDTO> selectedList = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<MajorDTO>>() {}.getType());
+        return selectedList;
+    }
+
+    public ArrayList<MenuTabDTO> getMenuTabs() {
+        List<Map<String, Object>> listOfMaps = null;
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            listOfMaps = queryRunner.query(conn, "SELECT * FROM menu_tabs ORDER BY tab_id DESC", new MapListHandler());
+        } catch (SQLException se) {
+            se.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+        Gson gson = new Gson();
+        ArrayList<MenuTabDTO> selectedList = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<MenuTabDTO>>() {}.getType());
+        return selectedList;
+    }
+
+    public ArrayList<MenuPageDTO> getMenuPages() {
+        List<Map<String, Object>> listOfMaps = null;
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            listOfMaps = queryRunner.query(conn, "SELECT * FROM menu_pages ORDER BY page_id DESC", new MapListHandler());
+        } catch (SQLException se) {
+            se.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+        Gson gson = new Gson();
+        ArrayList<MenuPageDTO> selectedList = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<MenuPageDTO>>() {}.getType());
         return selectedList;
     }
 

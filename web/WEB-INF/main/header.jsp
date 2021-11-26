@@ -8,6 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String user =  (String)session.getAttribute("user");
+    String type =  (String)session.getAttribute("type");
+    String menuTabs =  (String)session.getAttribute("menuTabs");
+    String menuPages =  (String)session.getAttribute("menuPages");
 %>
 <!-- Sub Header -->
 <div class="sub-header">
@@ -106,6 +109,7 @@
 <script>
     $(document).ready(function () {
         makeLoginInfo();
+        makeHeader();
     })
     function makeLoginInfo(){
         let text = '';
@@ -118,5 +122,10 @@
             text+='<li><a href="logout.kgu"><i class="fa fa-sign-in"></i> 로그아웃</a></li>'
         }
         loginInfo.append(text);
+    }
+
+    function makeHeader(){
+        let menuTabs =  <%=menuTabs%>;
+        let menuPages =  <%=menuPages%>;
     }
 </script>

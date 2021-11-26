@@ -1,5 +1,8 @@
 package kr.ac.kyonggi.gabrielyoon7.common.filter;
 
+import com.google.gson.Gson;
+import kr.ac.kyonggi.gabrielyoon7.handler.dao.main.HomeDAO;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -23,7 +26,7 @@ public class SFilter implements Filter {
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)   throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) res;
-//        HttpSession session = request.getSession(true);
+        HttpSession session = request.getSession(true);
 
         /**
          * 자바 프로젝트가 UTF-8 인코딩으로 동작하게 설정해주는 역할
@@ -31,6 +34,19 @@ public class SFilter implements Filter {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setHeader("P3P","CP='CAO PSA CONI OTR OUR DEM ONL'");
+
+
+        if(session.getAttribute("type") == null) {
+            Gson gson = new Gson();
+            session.setAttribute("type", "게스트");
+            session.setAttribute("menuTabs", gson.toJson(HomeDAO.getInstance().getMenuTabs()));
+            session.setAttribute("menuPages", gson.toJson(HomeDAO.getInstance().getMenuPages()));
+            response.sendRedirect("Index");
+            return;
+        }
+
+
+
         chain.doFilter(request, response);
     }
 
