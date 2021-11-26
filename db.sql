@@ -61,12 +61,12 @@ CREATE TABLE menu_tabs(
                           `tab_title` VARCHAR(30) NOT NULL,
                           PRIMARY KEY(`tab_id`)
 );
-INSERT INTO menu_tabs(tab_id, tab_title, tab_level, tab_url, orderNum) VALUES(1, '학과소개');
-INSERT INTO menu_tabs(tab_id, tab_title, tab_level, tab_url, orderNum) VALUES(2, '교육활동');
-INSERT INTO menu_tabs(tab_id, tab_title, tab_level, tab_url, orderNum) VALUES(3, '구성원');
-INSERT INTO menu_tabs(tab_id, tab_title, tab_level, tab_url, orderNum) VALUES(4, '학과알림');
-INSERT INTO menu_tabs(tab_id, tab_title, tab_level, tab_url, orderNum) VALUES(5, '신청하기');
-INSERT INTO menu_tabs(tab_id, tab_title, tab_level, tab_url, orderNum) VALUES(6, '웹진');
+INSERT INTO menu_tabs(tab_id, tab_title) VALUES(1, '학과소개');
+INSERT INTO menu_tabs(tab_id, tab_title) VALUES(2, '교육활동');
+INSERT INTO menu_tabs(tab_id, tab_title) VALUES(3, '구성원');
+INSERT INTO menu_tabs(tab_id, tab_title) VALUES(4, '학과알림');
+INSERT INTO menu_tabs(tab_id, tab_title) VALUES(5, '신청하기');
+INSERT INTO menu_tabs(tab_id, tab_title) VALUES(6, '웹진');
 
 CREATE TABLE menu_pages(
                            `page_id` INT(10) NOT NULL,
