@@ -56,18 +56,50 @@ INSERT INTO slider(id,slider_img,slider_major) VALUE(1, '/assets/images/slider/s
 INSERT INTO slider(id,slider_img,slider_major) VALUE(2, '/assets/images/slider/slider_img2.jpg', 'main');
 INSERT INTO slider(id,slider_img,slider_major) VALUE(3, '/assets/images/slider/slider_img3.jpg', 'main');
 
-CREATE TABLE banner(
-                       `id` INT(10) NOT NULL AUTO_INCREMENT,
-                       `title` VARCHAR(100) DEFAULT NULL,
-                       `description` VARCHAR(100) DEFAULT NULL,
-                       `link` VARCHAR(100) DEFAULT NULL,
-                       PRIMARY KEY (`id`)
+CREATE TABLE menu_tabs(
+                          `tab_id` INT(10) NOT NULL,
+                          `tab_title` VARCHAR(30) NOT NULL,
+                          PRIMARY KEY(`tab_id`)
+);
+INSERT INTO menu_tabs(tab_id, tab_title, tab_level, tab_url, orderNum) VALUES(1, '학과소개');
+INSERT INTO menu_tabs(tab_id, tab_title, tab_level, tab_url, orderNum) VALUES(2, '교육활동');
+INSERT INTO menu_tabs(tab_id, tab_title, tab_level, tab_url, orderNum) VALUES(3, '구성원');
+INSERT INTO menu_tabs(tab_id, tab_title, tab_level, tab_url, orderNum) VALUES(4, '학과알림');
+INSERT INTO menu_tabs(tab_id, tab_title, tab_level, tab_url, orderNum) VALUES(5, '신청하기');
+INSERT INTO menu_tabs(tab_id, tab_title, tab_level, tab_url, orderNum) VALUES(6, '웹진');
+
+CREATE TABLE menu_pages(
+                           `page_id` INT(10) NOT NULL,
+                           `tab_id` INT(10) NOT NULL,
+                           `orderNum` INT(10) NOT NULL,
+                           `page_path` VARCHAR(50) NOT NULL,
+                           `page_title` VARCHAR(250) NOT NULL,
+                           PRIMARY KEY(`page_id`)
 );
 
-INSERT INTO banner(id,title,description,link) VALUE(1, 'SWAIG', '설명1', 'main.kgu?major=main');
-INSERT INTO banner(id,title,description,link) VALUE(2, 'KUTIS', '설명2', 'https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp');
-INSERT INTO banner(id,title,description,link) VALUE(3, 'LMS', '설명3', 'https://lms.kyonggi.ac.kr/');
-INSERT INTO banner(id,title,description,link) VALUE(4, 'Facebook', '설명4', 'https://www.facebook.com/kgucs/');
-INSERT INTO banner(id,title,description,link) VALUE(5, '소프트웨어중심대학사업단', '설명5', 'https://swuniv.kyonggi.ac.kr/introduction/organization');
-INSERT INTO banner(id,title,description,link) VALUE(6, '콘텐츠융합소프트웨어연구소', '설명6', 'https://sites.google.com/kyonggi.ac.kr/ccsri');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(10, 1, 0, 'information.kgu', '학과소개');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(11, 1, 1, 'information.kgu', '연혁');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(12, 1, 2, 'information.kgu', '교육환경');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(13, 1, 3, 'information.kgu', '교육목표');
 
+
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(20, 2, 0, 'information.kgu', '교육과정');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(21, 2, 1, 'information.kgu', '학습활동');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(22, 2, 2, 'information.kgu', '동아리소개');
+
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(30, 3, 0, 'information.kgu', '교수소개');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(31, 3, 1, 'information.kgu', '연구실');
+
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(40, 4, 0, 'bbs.kgu', '전체공지');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(41, 4, 1, 'bbs.kgu', '학과공지');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(42, 4, 2, 'bbs.kgu', '수업공지');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(43, 4, 3, 'bbs.kgu', '취업공지');
+
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(50, 5, 0, 'information.kgu', '신청 및 접수');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(51, 5, 1, 'information.kgu', '졸업논문');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(52, 5, 2, 'information.kgu', '학과 자료실');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(53, 5, 3, 'information.kgu', '사물함 신청');
+
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(60, 6, 0, 'information.kgu', '학과 소식');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(61, 6, 1, 'information.kgu', '우수 작품전');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(62, 6, 2, 'information.kgu', '수상 소식');

@@ -47,6 +47,11 @@
             <%@include file="/WEB-INF/page/bbs/bbs-read.jsp" %>
         </c:when>
 
+        <%--            information--%>
+        <c:when test="${jsp == '\"information\"'}">
+            <%@include file="/WEB-INF/page/information/information.jsp" %>
+        </c:when>
+
         <c:otherwise>
             <div>잘못된 jsp 변수가 넘어왔습니다.</div>
         </c:otherwise>
