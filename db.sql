@@ -103,3 +103,18 @@ INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(53, 5
 INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(60, 6, 0, 'information.kgu', '학과 소식');
 INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(61, 6, 1, 'information.kgu', '우수 작품전');
 INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(62, 6, 2, 'information.kgu', '수상 소식');
+
+CREATE TABLE banner(
+                       `id` INT(10) NOT NULL AUTO_INCREMENT,
+                       `title` VARCHAR(100) DEFAULT NULL,
+                       `description` VARCHAR(100) DEFAULT NULL,
+                       `link` VARCHAR(100) DEFAULT NULL,
+                       PRIMARY KEY (`id`)
+);
+
+INSERT INTO banner(id,title,description,link) VALUE(1, 'SWAIG', '설명1', 'http://swaig.kyonggi.ac.kr:8080');
+INSERT INTO banner(id,title,description,link) VALUE(2, 'KUTIS', '설명2', 'https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp');
+INSERT INTO banner(id,title,description,link) VALUE(3, 'LMS', '설명3', 'https://lms.kyonggi.ac.kr/');
+INSERT INTO banner(id,title,description,link) VALUE(4, 'Facebook', '설명4', 'https://www.facebook.com/kgucs/');
+INSERT INTO banner(id,title,description,link) VALUE(5, '소프트웨어중심대학사업단', '설명5', 'https://swuniv.kyonggi.ac.kr/introduction/organization');
+INSERT INTO banner(id,title,description,link) VALUE(6, '콘텐츠융합소프트웨어연구소', '설명6', 'https://sites.google.com/kyonggi.ac.kr/ccsri');

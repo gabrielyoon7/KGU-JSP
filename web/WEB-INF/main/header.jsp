@@ -9,11 +9,14 @@
 <%
     String major = (String)request.getAttribute("major");
     String majorInfo = (String)request.getAttribute("majorInfo");
-//    System.out.println(major);
+    String num =  (String)request.getAttribute("num");
+
+            //    System.out.println(major);
     String user =  (String)session.getAttribute("user");
     String type =  (String)session.getAttribute("type");
     String menuTabs =  (String)session.getAttribute("menuTabs");
     String menuPages =  (String)session.getAttribute("menuPages");
+
 %>
 <!-- Sub Header -->
 <div class="sub-header">
@@ -59,13 +62,53 @@
 </header>
 <!-- ***** Header Area End ***** -->
 <script>
+    function headerActionScript() {
+        const dropdownOpener = $('.main-nav ul.nav .has-sub > a');
+
+        // Open/Close Submenus
+        if (dropdownOpener.length) {
+            dropdownOpener.each(function () {
+                var _this = $(this);
+
+                _this.on('tap click', function (e) {
+                    var thisItemParent = _this.parent('li'),
+                        thisItemParentSiblingsWithDrop = thisItemParent.siblings('.has-sub');
+
+                    if (thisItemParent.hasClass('has-sub')) {
+                        var submenu = thisItemParent.find('> ul.sub-menu');
+
+                        if (submenu.is(':visible')) {
+                            submenu.slideUp(450, 'easeInOutQuad');
+                            thisItemParent.removeClass('is-open-sub');
+                        } else {
+                            thisItemParent.addClass('is-open-sub');
+
+                            if (thisItemParentSiblingsWithDrop.length === 0) {
+                                thisItemParent.find('.sub-menu').slideUp(400, 'easeInOutQuad', function () {
+                                    submenu.slideDown(250, 'easeInOutQuad');
+                                });
+                            } else {
+                                thisItemParent.siblings().removeClass('is-open-sub').find('.sub-menu').slideUp(250, 'easeInOutQuad', function () {
+                                    submenu.slideDown(250, 'easeInOutQuad');
+                                });
+                            }
+                        }
+                    }
+
+                    e.preventDefault();
+                });
+            });
+        }
+    }
+
     $(document).ready(function () {
         makeLoginInfo();
         makeHeaderLogo();
         makeHeader();
+        // headerActionScript();
+        $.getScript('/assets/js/custom.js');
+
     })
-    let major = <%=major%>;
-    let majorInfo = <%=majorInfo%>;
     function makeLoginInfo(){
         let text = '';
         let user = <%=user%>;
@@ -80,6 +123,7 @@
     }
 
     function makeHeaderLogo(){
+        let majorInfo = <%=majorInfo%>;
         let headerLogo = $('#headerLogo');
         let text='<a href="main.kgu?major='+majorInfo.code+'" class="logo">'+majorInfo.major+'</a>';
         headerLogo.prepend(text);
@@ -88,6 +132,7 @@
     function makeHeader(){
         let menuTabs =  <%=menuTabs%>;
         let menuPages =  <%=menuPages%>;
+        let major = <%=major%>;
         <%--let type = <%=type%>;--%>
         let text = '';
         let headerMenu = $('#headerMenu');

@@ -16,7 +16,7 @@ public class MainAction extends CommonAction {
         Gson gson = new Gson();
         request.setAttribute("slider", gson.toJson(HomeDAO.getInstance().getSlider()));
         request.setAttribute("majorList",gson.toJson(HomeDAO.getInstance().getMajorList()));
-//        request.setAttribute("bannerList",gson.toJson(HomeDAO.getInstance().getBannerList()));
+        request.setAttribute("bannerList",gson.toJson(HomeDAO.getInstance().getBannerList()));
         return "main/main.jsp";
     }
 }

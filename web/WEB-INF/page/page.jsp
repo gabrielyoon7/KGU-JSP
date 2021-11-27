@@ -21,10 +21,7 @@
 <section class="heading-page header-text" id="top">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <h6>나중에 수정 예정1</h6>
-                <h2>나중에 수정 예정2</h2>
-            </div>
+            <div class="col-lg-12" id="sectionTitles"></div>
         </div>
     </div>
 </section>
@@ -61,4 +58,33 @@
 </section>
 <%@include file="/WEB-INF/main/settings-bottom.jsp" %>
 </body>
+<script>
+    function makeSection() {
+        let num = <%=num%>;
+        let tab_id = num.slice(0, -1);
+        console.log(tab_id);
+        let menuTabs =  <%=menuTabs%>;
+        let menuPages =  <%=menuPages%>;
+        let section = $('#sectionTitles');
+        let text='';
+        for(let i = 0 ; i< menuTabs.length; i++){
+            if(menuTabs[i].tab_id == tab_id){
+                text+='<h6>'+menuTabs[i].tab_title+'</h6>'
+                break;
+            }
+        }
+        for(let i = 0 ; i < menuPages.length; i ++){
+            if(menuPages[i].page_id == num){
+                text+='<h2>'+menuPages[i].page_title+'</h2>'
+                break;
+            }
+        }
+        section.append(text);
+    }
+
+    $(document).ready(function () {
+        makeSection();
+    })
+
+</script>
 </html>
