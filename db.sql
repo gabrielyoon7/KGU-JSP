@@ -118,3 +118,33 @@ INSERT INTO banner(id,title,description,link) VALUE(3, 'LMS', '설명3', 'https:
 INSERT INTO banner(id,title,description,link) VALUE(4, 'Facebook', '설명4', 'https://www.facebook.com/kgucs/');
 INSERT INTO banner(id,title,description,link) VALUE(5, '소프트웨어중심대학사업단', '설명5', 'https://swuniv.kyonggi.ac.kr/introduction/organization');
 INSERT INTO banner(id,title,description,link) VALUE(6, '콘텐츠융합소프트웨어연구소', '설명6', 'https://sites.google.com/kyonggi.ac.kr/ccsri');
+
+CREATE TABLE information(
+                       `id` INT(10) NOT NULL AUTO_INCREMENT,
+                       `major` VARCHAR(30) NOT NULL,
+                       `description` TEXT DEFAULT NULL,
+                       PRIMARY KEY (`id`)
+);
+
+INSERT INTO information(id,major,description) VALUE(10, 'main', '학과소개');
+INSERT INTO information(id,major,description) VALUE(11, 'main', '연혁');
+INSERT INTO information(id,major,description) VALUE(12, 'main', '교육환경');
+INSERT INTO information(id,major,description) VALUE(13, 'main', '교육목표');
+
+
+INSERT INTO information(id,major,description) VALUE(20, 'main', '교육과정');
+INSERT INTO information(id,major,description) VALUE(21, 'main', '학습활동');
+INSERT INTO information(id,major,description) VALUE(22, 'main', '동아리소개');
+
+INSERT INTO information(id,major,description) VALUE(30, 'main', '교수소개');
+INSERT INTO information(id,major,description) VALUE(31, 'main', '연구실');
+
+INSERT INTO information(id,major,description) VALUE(50, 'main', '신청 및 접수');
+INSERT INTO information(id,major,description) VALUE(51, 'main', '졸업논문');
+INSERT INTO information(id,major,description) VALUE(52, 'main', '학과 자료실');
+INSERT INTO information(id,major,description) VALUE(53, 'main', '사물함 신청');
+
+INSERT INTO information(id,major,description) VALUE(60, 'main', '학과 소식');
+INSERT INTO information(id,major,description) VALUE(61, 'main', '우수 작품전');
+INSERT INTO information(id,major,description) VALUE(62, 'main', '수상 소식');
+

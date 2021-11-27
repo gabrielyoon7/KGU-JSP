@@ -15,6 +15,10 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
+
+    <%--    ckeditor    --%>
+    <script src="//cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+
     <title>Education Meeting HTML5 Template</title>
 
     <!-- Bootstrap core CSS -->
