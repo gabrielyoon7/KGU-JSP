@@ -197,7 +197,7 @@
                             <p>You are allowed to use this edu meeting CSS template for your school or university or
                                 business. You can feel free to modify or edit this layout.</p>
                             <div class="main-button-red">
-                                <div class="scroll-to-section major-color"><a href="#">Join Us Now!</a></div>
+                                <div class="scroll-to-section"><a class="major-color" href="#">Join Us Now!</a></div>
                             </div>
                         </div>
                     </div>
@@ -207,7 +207,7 @@
                             <p>You are not allowed to redistribute the template ZIP file on any other template website.
                                 Please contact us for more information.</p>
                             <div class="main-button-yellow">
-                                <div class="scroll-to-section major-color"><a href="#">Join Us Now!</a></div>
+                                <div class="scroll-to-section"><a class="major-color" href="#">Join Us Now!</a></div>
                             </div>
                         </div>
                     </div>

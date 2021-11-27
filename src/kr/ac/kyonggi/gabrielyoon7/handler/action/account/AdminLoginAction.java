@@ -16,7 +16,8 @@ public class AdminLoginAction implements Action {
         if(id.equals("admin") && password.equals("admin1234")){
             String managerInfo = "{\"oid\":\"0\",\"google_id\":\"manager\",\"google_email\":\"manager@kyonggi.ac.kr\",\"google_image_url\":\"#\",\"google_name\":\"manager\",\"name\":\"홈페이지관리자\",\"birthday\":\"11월 28, 2021\",\"gender\":\"남\",\"phone\":\"010-0000-0000\",\"type\":\"관리자\",\"major\":\"main\"}";
             session.setAttribute("user", managerInfo);
-            return "main/main.jsp";
+            response.sendRedirect("/main.kgu");
+            return "" ;
         }
         else {
             return "main/error.jsp";

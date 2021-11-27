@@ -56,16 +56,15 @@
                         <div class="form-floating mb-3">
                             <select class="form-select" id="type" name="type" aria-label="Floating label select example">
                                 <option selected>골라주세요</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+<%--                                <option value="1">홈페이지관리자</option>--%>
+                                <option value="교수">교수</option>
+                                <option value="조교">조교</option>
+                                <option value="학부생">학부생</option>
                             </select>
                             <label for="type">회원 구분</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <select class="form-select" id="major" name="major" aria-label="Floating label select example">
-                                <option selected>전공 선택</option>
-                            </select>
+                            <select class="form-select" id="major" name="major" aria-label="Floating label select example"></select>
                             <label for="major">전공</label>
                         </div>
                         <input type="submit" value="회원가입하기">
