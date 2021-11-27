@@ -110,17 +110,38 @@
         makeHeader();
         // headerActionScript();
         $.getScript('/assets/js/custom.js');
-
+        makeColorSet();
     })
+
+
+    function makeColorSet(){
+        let majorInfo = <%=majorInfo%>;
+        let rgb = majorInfo.color;
+        let majorColor = document.getElementsByClassName("major-color");
+        for( let i = 0; i < majorColor.length; i++ ){
+            let component = majorColor.item(i);
+            component.style.backgroundImage = 'none';
+            component.style.backgroundColor = rgb;
+        }
+    }
+
     function makeLoginInfo(){
         let text = '';
+        let temp = '';
         let user = <%=user%>;
         let loginInfo = $('#loginInfo');
         if(user == null){
             text+='<li><a href="adminLoginPage.kgu"><i class="fa fa-sign-in"></i> 관리자 로그인</a> <a href="loginPage.kgu"><i class="ms-2 fa fa-sign-in"></i> 구글 로그인</a></li>'
         }
         else {
-            text+='<li><a>안녕하세요 '+user.name+'님!</a> <a href="logout.kgu"><i class="ms-2 fa fa-sign-in"></i> 로그아웃</a></li>'
+            if(user.type=='관리자'){
+                temp = '<a class="ms-2" href="admin.kgu">관리 페이지</a>';
+            }
+            else{
+                temp = '<a class="ms-2" href="mypage.kgu">마이 페이지</a>';
+            }
+
+            text+='<li><a>안녕하세요 '+user.name+'님!</a> '+temp+' <a href="logout.kgu"><i class="ms-2 fa fa-sign-in"></i> 로그아웃</a></li>'
         }
         loginInfo.append(text);
     }

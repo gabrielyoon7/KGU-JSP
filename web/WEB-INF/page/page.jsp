@@ -18,7 +18,7 @@
 <%@include file="/WEB-INF/main/settings-top.jsp" %>
 <body>
 <%@include file="/WEB-INF/main/header.jsp" %>
-<section class="heading-page header-text" id="top">
+<section class="heading-page header-text major-color" id="top">
     <div class="container">
         <div class="row">
             <div class="col-lg-12" id="sectionTitles"></div>
@@ -34,6 +34,9 @@
         </c:when>
         <c:when test="${jsp == '\"signupPage\"'}">
             <%@include file="/WEB-INF/page/account/signupPage.jsp" %>
+        </c:when>
+        <c:when test="${jsp == '\"myPage\"'}">
+            <%@include file="/WEB-INF/page/account/myPage.jsp" %>
         </c:when>
 
         <%--            bbs--%>
@@ -52,6 +55,9 @@
         <%--            admin--%>
         <c:when test="${jsp == '\"adminLoginPage\"'}">
             <%@include file="/WEB-INF/page/account/adminLoginPage.jsp" %>
+        </c:when>
+        <c:when test="${jsp == '\"admin_user\"'}">
+            <%@include file="/WEB-INF/page/admin/admin_user.jsp" %>
         </c:when>
 
 

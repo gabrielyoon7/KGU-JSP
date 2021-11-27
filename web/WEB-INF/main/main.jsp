@@ -695,19 +695,14 @@
 <script>
     $(document).ready(function () {
         makeCarouselCard();
-        makeColorSet();
+        makeBackgroundColor();
         // makeBanner();
     })
 
-    function makeColorSet(){
+    function makeBackgroundColor(){
         let majorInfo = <%=majorInfo%>;
         let rgb = majorInfo.color;
         document.getElementById("bg-video").style.backgroundColor = rgb;
-        let majorColor = document.getElementsByClassName("major-color");
-        for( let i = 0; i < majorColor.length; i++ ){
-            let component = majorColor.item(i);
-            component.style.backgroundColor = rgb;
-        }
     }
 
     function makeCarouselCard() { // 슬라이더 카드 만드는 함수
