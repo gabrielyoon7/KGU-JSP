@@ -41,8 +41,6 @@ public class SFilter implements Filter {
             session.setAttribute("type", "게스트");
             session.setAttribute("menuTabs", gson.toJson(HomeDAO.getInstance().getMenuTabs()));
             session.setAttribute("menuPages", gson.toJson(HomeDAO.getInstance().getMenuPages()));
-            response.sendRedirect("Index");
-            return;
         }
 
 

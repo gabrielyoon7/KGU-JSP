@@ -81,7 +81,7 @@ public class HomeDAO {
         Connection conn = Config.getInstance().sqlLogin();
         try {
             QueryRunner queryRunner = new QueryRunner();
-            listOfMaps = queryRunner.query(conn, "SELECT * FROM menu_tabs ORDER BY tab_id DESC", new MapListHandler());
+            listOfMaps = queryRunner.query(conn, "SELECT * FROM menu_tabs ORDER BY tab_id ASC", new MapListHandler());
         } catch (SQLException se) {
             se.printStackTrace();
         } finally {
@@ -97,7 +97,7 @@ public class HomeDAO {
         Connection conn = Config.getInstance().sqlLogin();
         try {
             QueryRunner queryRunner = new QueryRunner();
-            listOfMaps = queryRunner.query(conn, "SELECT * FROM menu_pages ORDER BY page_id DESC", new MapListHandler());
+            listOfMaps = queryRunner.query(conn, "SELECT * FROM menu_pages ORDER BY page_id ASC", new MapListHandler());
         } catch (SQLException se) {
             se.printStackTrace();
         } finally {
@@ -106,6 +106,39 @@ public class HomeDAO {
         Gson gson = new Gson();
         ArrayList<MenuPageDTO> selectedList = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<MenuPageDTO>>() {}.getType());
         return selectedList;
+    }
+    public ArrayList<MajorDTO> getAllMajor() {
+        List<Map<String, Object>> listOfMaps = null;
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            listOfMaps = queryRunner.query(conn, "SELECT * FROM `major`;", new MapListHandler());
+        } catch (SQLException se) {
+            se.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+        Gson gson = new Gson();
+        ArrayList<MajorDTO> selectedList = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<MajorDTO>>() {}.getType());
+        return selectedList;
+    }
+    public MajorDTO getMajor(String major) {
+        List<Map<String, Object>> listOfMaps = null;
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            listOfMaps = queryRunner.query(conn, "SELECT * FROM `major` WHERE `code`=?;", new MapListHandler(), major);
+        } catch (SQLException se) {
+            se.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+        Gson gson = new Gson();
+        ArrayList<MajorDTO> selectedList = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<MajorDTO>>() {}.getType());
+        if(selectedList.size()==0){
+            return null;
+        }
+        return selectedList.get(0);
     }
 
 }

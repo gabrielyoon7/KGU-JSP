@@ -7,6 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+    String major = (String)request.getAttribute("major");
+    String majorInfo = (String)request.getAttribute("majorInfo");
+//    System.out.println(major);
     String user =  (String)session.getAttribute("user");
     String type =  (String)session.getAttribute("type");
     String menuTabs =  (String)session.getAttribute("menuTabs");
@@ -38,63 +41,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <nav class="main-nav">
+                <nav class="main-nav" id="headerLogo">
                     <!-- ***** Logo Start ***** -->
-                    <a href="main.kgu" class="logo">
-                        컴퓨터공학전공
-                    </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li class="has-sub">
-                            <a href="javascript:void(0)">학과소개</a>
-                            <ul class="sub-menu">
-                                <li><a href="bbs.kgu?mode=list&num=41">학과소개</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=42">연혁</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=42">교육환경</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=42">교육목표</a></li>
-                            </ul>
-                        </li>                        <li class="has-sub">
-                            <a href="javascript:void(0)">교육활동</a>
-                            <ul class="sub-menu">
-                                <li><a href="bbs.kgu?mode=list&num=41">교육과정</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=42">학습활동</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=42">동아리소개</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a href="javascript:void(0)">구성원</a>
-                            <ul class="sub-menu">
-                                <li><a href="bbs.kgu?mode=list&num=41">교수소개</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=42">연구실</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a href="javascript:void(0)">학과알림</a>
-                            <ul class="sub-menu">
-                                <li><a href="bbs.kgu?mode=list&num=41">전체공지</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=42">학과공지</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=43">수업공지</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=44">취업공지</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a href="javascript:void(0)">신청하기</a>
-                            <ul class="sub-menu">
-                                <li><a href="bbs.kgu?mode=list&num=41">신청 및 접수</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=42">졸업논문</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=43">학과 자료실</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=44">사물함 신청</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a href="javascript:void(0)">웹진</a>
-                            <ul class="sub-menu">
-                                <li><a href="bbs.kgu?mode=list&num=41">학과 소식</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=42">우수 작품전</a></li>
-                                <li><a href="bbs.kgu?mode=list&num=43">수상 소식</a></li>
-                            </ul>
-                        </li>
+                    <ul class="nav" id="headerMenu">
+
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -109,8 +61,11 @@
 <script>
     $(document).ready(function () {
         makeLoginInfo();
+        makeHeaderLogo();
         makeHeader();
     })
+    let major = <%=major%>;
+    let majorInfo = <%=majorInfo%>;
     function makeLoginInfo(){
         let text = '';
         let user = <%=user%>;
@@ -124,8 +79,29 @@
         loginInfo.append(text);
     }
 
+    function makeHeaderLogo(){
+        let headerLogo = $('#headerLogo');
+        let text='<a href="main.kgu?major='+majorInfo.code+'" class="logo">'+majorInfo.major+'</a>';
+        headerLogo.prepend(text);
+    }
+
     function makeHeader(){
         let menuTabs =  <%=menuTabs%>;
         let menuPages =  <%=menuPages%>;
+        <%--let type = <%=type%>;--%>
+        let text = '';
+        let headerMenu = $('#headerMenu');
+        for(let i = 0 ; i < menuTabs.length; i++){
+            text+='<li class="has-sub">'
+                +'<a href="javascript:void(0)">'+menuTabs[i].tab_title+'</a>'
+                +'<ul class="sub-menu">';
+            for(let j = 0 ; j < menuPages.length; j++){
+                if(menuPages[j].tab_id ==menuTabs[i].tab_id){
+                    text+='<li><a href="'+menuPages[j].page_path+'?major='+major+'&num='+menuPages[j].page_id+'">'+menuPages[j].page_title+'</a></li>';
+                }
+            }
+            text+='</ul></li>';
+        }
+        headerMenu.append(text);
     }
 </script>
