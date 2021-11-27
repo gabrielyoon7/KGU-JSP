@@ -26,7 +26,9 @@
             <div>
 <%--            <div class="col-lg-8 col-sm-8">--%>
                 <div class="left-content">
-                    <p><span>경기대학교</span> <em>AI컴퓨터공학부</em> <span>차세대 홈페이지</span></p>
+                    <a href="main.kgu" style="text-decoration:none ;">
+                        <p><span>경기대학교</span> <em>AI컴퓨터공학부</em> <span>차세대 홈페이지</span></p>
+                    </a>
                 </div>
             </div>
             <div>

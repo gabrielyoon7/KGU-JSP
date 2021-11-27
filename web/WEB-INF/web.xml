@@ -15,7 +15,29 @@
         <url-pattern>*.kgu</url-pattern>
     </servlet-mapping>
 
-
-
+    <security-role>
+        <description></description >
+        <role-name>role1</role-name>
+    </security-role>
+    <security-constraint>
+        <display-name>WebMarket Security</display-name>
+        <web-resource-collection>
+            <web-resource-name>JSPBook</web-resource-name>
+            <description></description>
+            <url-pattern>/security.jsp</url-pattern>
+            <http-method>GET</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <description></description>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/admin/admin_login_page.jsp</form-login-page>
+            <form-error-page>/admin/admin_login_failed.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
 
 </web-app>

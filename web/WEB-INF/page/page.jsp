@@ -49,6 +49,12 @@
             <%@include file="/WEB-INF/page/information/information.jsp" %>
         </c:when>
 
+        <%--            admin--%>
+        <c:when test="${jsp == '\"admin_login_page\"'}">
+            <%@include file="/admin/admin_login_page.jsp" %>
+        </c:when>
+
+
         <c:otherwise>
             <div>잘못된 jsp 변수가 넘어왔습니다.</div>
         </c:otherwise>
