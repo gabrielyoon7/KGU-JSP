@@ -116,10 +116,10 @@
         let user = <%=user%>;
         let loginInfo = $('#loginInfo');
         if(user == null){
-            text+='<li><a href="loginPage.kgu"><i class="fa fa-sign-in"></i> 로그인</a></li>'
+            text+='<li><a href="adminLoginPage.kgu"><i class="fa fa-sign-in"></i> 관리자 로그인</a> <a href="loginPage.kgu"><i class="ms-2 fa fa-sign-in"></i> 구글 로그인</a></li>'
         }
         else {
-            text+='<li><a href="logout.kgu"><i class="fa fa-sign-in"></i> 로그아웃</a></li>'
+            text+='<li><a>안녕하세요 '+user.name+'님!</a> <a href="logout.kgu"><i class="ms-2 fa fa-sign-in"></i> 로그아웃</a></li>'
         }
         loginInfo.append(text);
     }

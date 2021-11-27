@@ -49,40 +49,40 @@
             <div class="meeting-single-item">
                 <div class="card">
                     <div class="d-flex justify-content-center">
-                        <div class="" style="width: 450px;">
-                            <form method="POST" action="#" id="login_form">
-                                <h1 class="h3 mb-3 fw-normal">로그인</h1>
+<%--                        <div class="" style="width: 450px;">--%>
+<%--                            <form method="POST" action="#" id="login_form">--%>
+<%--                                <h1 class="h3 mb-3 fw-normal">로그인</h1>--%>
 
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" name="id" id="id" placeholder="아이디를 입력하세요">
-                                    <label for="id">아이디</label>
-                                    <input type="submit" onclick="letsSubmit()" style="display:none">
-                                </div>
-                                <div class="form-floating">
-                                    <input type="password" class="form-control" name="password" id="password"
-                                           placeholder="비밀번호를 입력하세요">
-                                    <label for="password">비밀번호</label>
-                                    <input type="hidden" name="password_hash" id="password_hash" class="iText"
-                                           value="VALUE_NOT_EMPTY">
-                                </div>
+<%--                                <div class="form-floating">--%>
+<%--                                    <input type="text" class="form-control" name="id" id="id" placeholder="아이디를 입력하세요">--%>
+<%--                                    <label for="id">아이디</label>--%>
+<%--                                    <input type="submit" onclick="letsSubmit()" style="display:none">--%>
+<%--                                </div>--%>
+<%--                                <div class="form-floating">--%>
+<%--                                    <input type="password" class="form-control" name="password" id="password"--%>
+<%--                                           placeholder="비밀번호를 입력하세요">--%>
+<%--                                    <label for="password">비밀번호</label>--%>
+<%--                                    <input type="hidden" name="password_hash" id="password_hash" class="iText"--%>
+<%--                                           value="VALUE_NOT_EMPTY">--%>
+<%--                                </div>--%>
 
-                                <div class="checkbox mb-3">
-                                    <label>
-                                        <p>
-                                            <span id="wrong_password">초기 비밀번호는 생년월일(6자리)입니다.</span>
-                                        </p>
-                                        <a href="#">
-                                            <div>아직 회원가입을 안하셨나요?</div>
-                                        </a>
-                                    </label>
-                                </div>
-                                <div style="width: 100%">
-                                    <a href="#" class="w-100 btn btn-lg btn-primary text-center" onclick="letsSubmit()"
-                                       style="text-decoration: none;">로그인</a>
-                                </div>
-                                <p class="mt-5 mb-3 text-muted"><a href="main.kgu">AI컴퓨터공학부 윤주현 &copy;2021</a></p>
-                            </form>
-                        </div>
+<%--                                <div class="checkbox mb-3">--%>
+<%--                                    <label>--%>
+<%--                                        <p>--%>
+<%--                                            <span id="wrong_password">초기 비밀번호는 생년월일(6자리)입니다.</span>--%>
+<%--                                        </p>--%>
+<%--                                        <a href="#">--%>
+<%--                                            <div>아직 회원가입을 안하셨나요?</div>--%>
+<%--                                        </a>--%>
+<%--                                    </label>--%>
+<%--                                </div>--%>
+<%--                                <div style="width: 100%">--%>
+<%--                                    <a href="#" class="w-100 btn btn-lg btn-primary text-center" onclick="letsSubmit()"--%>
+<%--                                       style="text-decoration: none;">로그인</a>--%>
+<%--                                </div>--%>
+<%--                                <p class="mt-5 mb-3 text-muted"><a href="main.kgu">AI컴퓨터공학부 윤주현 &copy;2021</a></p>--%>
+<%--                            </form>--%>
+<%--                        </div>--%>
                     </div>
                     <%--        구글 로그인 버튼 --%>
                     <div class="g-signin2 d-flex justify-content-center" data-onsuccess="onSignIn"></div>
@@ -99,12 +99,8 @@
 <script>
 
     $(document).ready(function () {
-        makeHeaderProfile(); //profile 제작
+        signOut();
     })
-
-    function makeHeaderProfile() {
-
-    }
 
 
     function signOut() {

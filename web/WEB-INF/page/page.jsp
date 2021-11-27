@@ -50,8 +50,8 @@
         </c:when>
 
         <%--            admin--%>
-        <c:when test="${jsp == '\"admin_login_page\"'}">
-            <%@include file="/admin/admin_login_page.jsp" %>
+        <c:when test="${jsp == '\"adminLoginPage\"'}">
+            <%@include file="/WEB-INF/page/account/adminLoginPage.jsp" %>
         </c:when>
 
 

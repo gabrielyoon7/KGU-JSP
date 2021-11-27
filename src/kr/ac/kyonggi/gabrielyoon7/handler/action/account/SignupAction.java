@@ -27,6 +27,6 @@ public class SignupAction implements Action {
                 "VALUE('"+google_id+"','"+google_email+"','"+google_imageUrl+"','"+google_name+"','"+univ_id+"','"+name+"','"+birthday+"','"+gender+"','"+phone+"','"+type+"','"+major+"');";
 //        System.out.println(query);
         UserDAO.getInstance().addUser(query);
-        return null;
+        return "main/main.jsp";
     }
 }
