@@ -109,7 +109,8 @@ public class HomeDAO {
         Connection conn = Config.getInstance().sqlLogin();
         try {
             QueryRunner queryRunner = new QueryRunner();
-            listOfMaps = queryRunner.query(conn, "SELECT * FROM `major`;", new MapListHandler());
+            listOfMaps = queryRunner.query(conn, "SELECT * FROM major;", new MapListHandler());
+            System.out.println(listOfMaps);
         } catch (SQLException se) {
             se.printStackTrace();
         } finally {

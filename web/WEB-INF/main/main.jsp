@@ -8,7 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String slider = (String) request.getAttribute("slider");
-    String majorList = (String) request.getAttribute("majorList");
 //    String bannerList = (String) request.getAttribute("bannerList");
 %>
 
@@ -23,7 +22,7 @@
     <%--    <video autoplay muted loop id="bg-video">--%>
     <%--        <source src="assets/images/course-video.mp4" type="video/mp4"/>--%>
     <%--    </video>--%>
-    <div class="bg-danger" id="bg-video"></div>
+    <div id="bg-video"></div>
 
     <div class="video-overlay header-text">
         <div class="container">
@@ -198,7 +197,7 @@
                             <p>You are allowed to use this edu meeting CSS template for your school or university or
                                 business. You can feel free to modify or edit this layout.</p>
                             <div class="main-button-red">
-                                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                                <div class="scroll-to-section major-color"><a href="#">Join Us Now!</a></div>
                             </div>
                         </div>
                     </div>
@@ -208,7 +207,7 @@
                             <p>You are not allowed to redistribute the template ZIP file on any other template website.
                                 Please contact us for more information.</p>
                             <div class="main-button-yellow">
-                                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                                <div class="scroll-to-section major-color"><a href="#">Join Us Now!</a></div>
                             </div>
                         </div>
                     </div>
@@ -696,8 +695,20 @@
 <script>
     $(document).ready(function () {
         makeCarouselCard();
+        makeColorSet();
         // makeBanner();
     })
+
+    function makeColorSet(){
+        let majorInfo = <%=majorInfo%>;
+        let rgb = majorInfo.color;
+        document.getElementById("bg-video").style.backgroundColor = rgb;
+        let majorColor = document.getElementsByClassName("major-color");
+        for( let i = 0; i < majorColor.length; i++ ){
+            let component = majorColor.item(i);
+            component.style.backgroundColor = rgb;
+        }
+    }
 
     function makeCarouselCard() { // 슬라이더 카드 만드는 함수
         var list = $('#carouselCard');

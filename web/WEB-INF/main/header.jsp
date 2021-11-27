@@ -10,6 +10,7 @@
     String major = (String)request.getAttribute("major");
     String majorInfo = (String)request.getAttribute("majorInfo");
     String num =  (String)request.getAttribute("num");
+    String majorAllInfo = (String) request.getAttribute("majorAllInfo");
 
             //    System.out.println(major);
     String user =  (String)session.getAttribute("user");
@@ -135,6 +136,7 @@
         let menuTabs =  <%=menuTabs%>;
         let menuPages =  <%=menuPages%>;
         let major = <%=major%>;
+        let majorAllInfo = <%=majorAllInfo%>;
         <%--let type = <%=type%>;--%>
         let text = '';
         let headerMenu = $('#headerMenu');
@@ -149,6 +151,13 @@
             }
             text+='</ul></li>';
         }
+        text+='<li class="has-sub">'
+            +'<a href="javascript:void(0)">전공 홈페이지</a>'
+            +'<ul class="sub-menu">';
+        for(let i = 0 ; i < majorAllInfo.length; i++){
+            text+='<li><a href="main.kgu?major='+majorAllInfo[i].code+'">'+majorAllInfo[i].major+'</a></li>';
+        }
+        text+='</ul></li>';
         headerMenu.append(text);
     }
 </script>

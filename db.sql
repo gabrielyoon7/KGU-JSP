@@ -41,9 +41,9 @@ CREATE TABLE major(
                       PRIMARY KEY (`oid`)
 );
 
-INSERT INTO major(oid,code,major,color) VALUE(1, 'main', 'AI컴퓨터공학부','#');
-INSERT INTO major(oid,code,major,color) VALUE(2, 'cs', '컴퓨터공학전공','#');
-INSERT INTO major(oid,code,major,color) VALUE(3, 'ai', '인공지능전공','#');
+INSERT INTO major(oid,code,major,color) VALUE(1, 'main', 'AI컴퓨터공학부','#FF0000');
+INSERT INTO major(oid,code,major,color) VALUE(2, 'cs', '컴퓨터공학전공','#22741C');
+INSERT INTO major(oid,code,major,color) VALUE(3, 'ai', '인공지능전공','#002266');
 
 CREATE TABLE slider(
                        `id` INT(10) NOT NULL AUTO_INCREMENT,
