@@ -120,10 +120,9 @@ INSERT INTO banner(id,title,description,link) VALUE(5, '소프트웨어중심대
 INSERT INTO banner(id,title,description,link) VALUE(6, '콘텐츠융합소프트웨어연구소', '설명6', 'https://sites.google.com/kyonggi.ac.kr/ccsri');
 
 CREATE TABLE information(
-                       `id` INT(10) NOT NULL AUTO_INCREMENT,
+                       `id` INT(10) NOT NULL,
                        `major` VARCHAR(30) NOT NULL,
-                       `description` TEXT DEFAULT NULL,
-                       PRIMARY KEY (`id`)
+                       `description` TEXT DEFAULT NULL
 );
 
 INSERT INTO information(id,major,description) VALUE(10, 'main', '학과소개');

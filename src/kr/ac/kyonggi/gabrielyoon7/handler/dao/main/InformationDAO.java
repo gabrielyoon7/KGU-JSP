@@ -64,4 +64,16 @@ public class InformationDAO {
         }
         return "success";
     }
+
+    public void initiateInformation(String major, String num) {
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            queryRunner.update(conn,"INSERT INTO information(id,major,description) VALUE(?,?,'"+num+major+"기본 데이터')", num, major);
+        } catch(SQLException se) {
+            se.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+    }
 }
