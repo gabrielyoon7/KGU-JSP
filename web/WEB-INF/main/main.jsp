@@ -6,6 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String slider = (String) request.getAttribute("slider");
+//    String bannerList = (String) request.getAttribute("bannerList");
+%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <%@include file="settings-top.jsp" %>
@@ -13,27 +19,31 @@
 <%@include file="header.jsp" %>
 <!-- ***** Main Banner Area Start ***** -->
 <section class="section main-banner" id="top" data-section="section1">
-<%--    <video autoplay muted loop id="bg-video">--%>
-<%--        <source src="assets/images/course-video.mp4" type="video/mp4"/>--%>
-<%--    </video>--%>
-    <div class="bg-danger" id="bg-video"></div>
+    <%--    <video autoplay muted loop id="bg-video">--%>
+    <%--        <source src="assets/images/course-video.mp4" type="video/mp4"/>--%>
+    <%--    </video>--%>
+    <div id="bg-video"></div>
 
     <div class="video-overlay header-text">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="caption">
-                        <h6>Hello Students</h6>
-                        <h2>Welcome to Education</h2>
-                        <p>This is an edu meeting HTML CSS template provided by <a rel="nofollow"
-                                                                                   href="https://templatemo.com/page/1"
-                                                                                   target="_blank">TemplateMo
-                            website</a>. This is a Bootstrap v5.1.3 layout. The video background is taken from Pexels
-                            website, a group of young people by <a rel="nofollow"
-                                                                   href="https://www.pexels.com/@pressmaster"
-                                                                   target="_blank">Pressmaster</a>.</p>
+                        <h6>안녕하세요</h6>
+                        <h2>AI컴퓨터공학부 201713919 윤주현입니다</h2>
+                        <p>
+                            기존 <a rel="nofollow" href="http://cs.kyonggi.ac.kr:8080" target="_blank">학과 홈페이지</a>
+                            를 관리하면서 문제라고 생각되던 구조를 대폭 개선하여
+                            <br>
+                            처음부터 재설계를 해봤습니다.
+                            <br>
+                            프로젝트 관리를 하면서 느꼈던 근본적인 문제를 해결하기 위해 기존 기능을 유지하되,
+                            <br>
+                            기능 동작에 관련된 코드를 모조리 다시 설계했습니다.
+                        </p>
                         <div class="main-button-red">
-                            <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                            <div class="scroll-to-section"><a href="https://github.com/gabrielyoon7/KGU-JSP-201713919">Github
+                                Repository로 이동하기</a></div>
                         </div>
                     </div>
                 </div>
@@ -47,63 +57,79 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="owl-service-item owl-carousel">
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="/assets/images/service-icon-01.png" alt="">
+                <div class="owl-service-item owl-carousel" id="banner">
+                    <a href="http://swaig.kyonggi.ac.kr:8080">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="/assets/images/service-icon-03.png" alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>SWAIG 홈페이지</h4>
+                                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
+                                    vestibulum.</p>
+                            </div>
                         </div>
-                        <div class="down-content">
-                            <h4>Best Education</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
-                                vestibulum.</p>
+                    </a>
+                    <a href="https://kutis.kyonggi.ac.kr/webkutis/view/indexWeb.jsp">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="/assets/images/service-icon-03.png" alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>KUTIS</h4>
+                                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
+                                    vestibulum.</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="/assets/images/service-icon-02.png" alt="">
+                    </a>
+                    <a href="https://lms.kyonggi.ac.kr/">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="/assets/images/service-icon-03.png" alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>LMS</h4>
+                                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
+                                    vestibulum.</p>
+                            </div>
                         </div>
-                        <div class="down-content">
-                            <h4>Best Teachers</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
-                                vestibulum.</p>
+                    </a>
+                    <a href="https://www.facebook.com/kgucs/">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="/assets/images/service-icon-03.png" alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>Facebook</h4>
+                                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
+                                    vestibulum.</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="/assets/images/service-icon-03.png" alt="">
+                    </a>
+                    <a href="https://swuniv.kyonggi.ac.kr/introduction/organization">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="/assets/images/service-icon-03.png" alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>소프트웨어중심대학사업단</h4>
+                                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
+                                    vestibulum.</p>
+                            </div>
                         </div>
-                        <div class="down-content">
-                            <h4>Best Students</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
-                                vestibulum.</p>
+                    </a>
+                    <a href="https://sites.google.com/kyonggi.ac.kr/ccsri">
+                        <div class="item">
+                            <div class="icon">
+                                <img src="/assets/images/service-icon-03.png" alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>콘텐츠융합소프트웨어연구소</h4>
+                                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
+                                    vestibulum.</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="/assets/images/service-icon-02.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <h4>Online Meeting</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
-                                vestibulum.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="/assets/images/service-icon-03.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <h4>Best Networking</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
-                                vestibulum.</p>
-                        </div>
-                    </div>
-
+                    </a>
                 </div>
             </div>
         </div>
@@ -113,100 +139,47 @@
 <section class="upcoming-meetings" id="meetings">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="section-heading">
-                    <h2>Upcoming Meetings</h2>
+            <div class="col-lg-12 mb-5">
+                <div class="slider_position mb-5">
+                    <%--                                    carousel start--%>
+                    <div id="myCarousel" class="h-100 carousel slide card border border-primary"
+                         data-bs-ride="carousel" style="margin-bottom : 0px; height:399px;">
+                        <div class="carousel-indicators" id="carouselButton">
+                            <%--   슬라이더 사진 개수와 동일한 버튼 만들어 줘야함 makecarouselCard에 있음--%>
+                        </div>
+                        <div class="carousel-inner h-100 " id="carouselCard">
+                            <%--     makecarouselCard에 있음--%>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <%--                                    carousel end--%>
+                </div>
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>최근 게시글</h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="categories m-0">
+                    영역1
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="categories">
-                    <h4>Meeting Catgories</h4>
-                    <ul>
-                        <li><a href="#">Sed tempus enim leo</a></li>
-                        <li><a href="#">Aenean molestie quis</a></li>
-                        <li><a href="#">Cras et metus vestibulum</a></li>
-                        <li><a href="#">Nam et condimentum</a></li>
-                        <li><a href="#">Phasellus nec sapien</a></li>
-                    </ul>
-                    <div class="main-button-red">
-                        <a href="meetings.html">All Upcoming Meetings</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="price">
-                                    <span>$22.00</span>
-                                </div>
-                                <a href="meeting-details.html"><img src="assets/images/meeting-01.jpg"
-                                                                    alt="New Lecturer Meeting"></a>
-                            </div>
-                            <div class="down-content">
-                                <div class="date">
-                                    <h6>Nov <span>10</span></h6>
-                                </div>
-                                <a href="meeting-details.html"><h4>New Lecturers Meeting</h4></a>
-                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="price">
-                                    <span>$36.00</span>
-                                </div>
-                                <a href="meeting-details.html"><img src="assets/images/meeting-02.jpg"
-                                                                    alt="Online Teaching"></a>
-                            </div>
-                            <div class="down-content">
-                                <div class="date">
-                                    <h6>Nov <span>24</span></h6>
-                                </div>
-                                <a href="meeting-details.html"><h4>Online Teaching Techniques</h4></a>
-                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="price">
-                                    <span>$14.00</span>
-                                </div>
-                                <a href="meeting-details.html"><img src="assets/images/meeting-03.jpg"
-                                                                    alt="Higher Education"></a>
-                            </div>
-                            <div class="down-content">
-                                <div class="date">
-                                    <h6>Nov <span>26</span></h6>
-                                </div>
-                                <a href="meeting-details.html"><h4>Higher Education Conference</h4></a>
-                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="meeting-item">
-                            <div class="thumb">
-                                <div class="price">
-                                    <span>$48.00</span>
-                                </div>
-                                <a href="meeting-details.html"><img src="assets/images/meeting-04.jpg"
-                                                                    alt="Student Training"></a>
-                            </div>
-                            <div class="down-content">
-                                <div class="date">
-                                    <h6>Nov <span>30</span></h6>
-                                </div>
-                                <a href="meeting-details.html"><h4>Student Training Meetup</h4></a>
-                                <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-lg-6">
+                <div class="categories m-0">
+                    영역2
                 </div>
             </div>
         </div>
@@ -224,7 +197,7 @@
                             <p>You are allowed to use this edu meeting CSS template for your school or university or
                                 business. You can feel free to modify or edit this layout.</p>
                             <div class="main-button-red">
-                                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                                <div class="scroll-to-section"><a class="major-color" href="#">Join Us Now!</a></div>
                             </div>
                         </div>
                     </div>
@@ -234,7 +207,7 @@
                             <p>You are not allowed to redistribute the template ZIP file on any other template website.
                                 Please contact us for more information.</p>
                             <div class="main-button-yellow">
-                                <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                                <div class="scroll-to-section"><a class="major-color" href="#">Join Us Now!</a></div>
                             </div>
                         </div>
                     </div>
@@ -719,4 +692,88 @@
 </section>
 <%@include file="settings-bottom.jsp" %>
 </body>
+<script>
+    $(document).ready(function () {
+        makeCarouselCard();
+        makeBackgroundColor();
+        // makeBanner();
+    })
+
+    function makeBackgroundColor(){
+        let majorInfo = <%=majorInfo%>;
+        let rgb = majorInfo.color;
+        document.getElementById("bg-video").style.backgroundColor = rgb;
+    }
+
+    function makeCarouselCard() { // 슬라이더 카드 만드는 함수
+        var list = $('#carouselCard');
+        var list2 = $('#carouselButton');
+        var text = '';
+        var text2 = '';
+        var sliderList = <%=slider%>;
+        if (sliderList.length == 0) { // 데이터가 없을 시 디폴트 화면 구성
+            text2 += '<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 0"></button>'
+            text += '<div class="h-100 carousel-item active">';
+            text += '<svg class="carousel-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>'
+            text += '<div class="container"> <div class="carousel-caption"> <h1 class="text-white">등록된 대문이 없습니다.</h1> <p>관리자 모드에서 대문을 추가해주시기 바랍니다.</p> </div> </div>'
+            text += '</div>';
+        }
+        for (var j = 0; j < sliderList.length; j++) {
+            if (j == 0) {
+                text2 += '<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="' + j + '" class="active" aria-current="true" aria-label="Slide ' + j + '"></button>'
+            } else {
+                text2 += '<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="' + j + '" aria-current="true" aria-label="Slide ' + j + '"></button>'
+            }
+        }
+        list2.append(text2);
+        for (var i = 0; i < sliderList.length; i++) {
+
+            if (i == 0) {
+                text += '<div class="carousel-item active">'
+            } else {
+                text += '<div class="carousel-item">'
+            }
+            text += '<img class="carousel-img" width="100%" height="100%" src = "' + sliderList[i].slider_img + '">'
+            text += '</div>';
+        }
+        list.append(text);
+    }
+
+    <%--function makeBanner(){--%>
+    <%--    let banner = $('#banner');--%>
+    <%--    let text = '';--%>
+    <%--    let majorList = <%=majorList%>;--%>
+    <%--    let bannerList = <%=bannerList%>;--%>
+
+    <%--    for(let i = 0 ; i < majorList.length; i++){--%>
+    <%--        text+='<div class="item">'--%>
+    <%--            +'<div class="icon">'--%>
+    <%--            +'<img src="/assets/images/service-icon-01.png" alt="">'--%>
+    <%--            +'</div>'--%>
+    <%--            +'<div class="down-content">'--%>
+    <%--            +'<a href="main.kgu?major='+majorList[i].code+'">'--%>
+    <%--            +'<h4>'+majorList[i].major+'</h4>'--%>
+    <%--            +'<p>전공 홈페이지로 이동하기</p>'--%>
+    <%--            +'</a>'--%>
+    <%--            +'</div>'--%>
+    <%--            +'</div>'--%>
+    <%--    }--%>
+    <%--    for(let i = 0 ; i < bannerList.length; i++){--%>
+    <%--        text+='<div class="item">'--%>
+    <%--            +'<div class="icon">'--%>
+    <%--            +'<img src="/assets/images/service-icon-02.png" alt="">'--%>
+    <%--            +'</div>'--%>
+    <%--            +'<div class="down-content">'--%>
+    <%--            +'<a href="'+bannerList[i].link+'">'--%>
+    <%--            +'<h4>'+bannerList[i].title+'</h4>'--%>
+    <%--            +'<p>'+bannerList[i].description+'</p>'--%>
+    <%--            +'</a>'--%>
+    <%--            +'</div>'--%>
+    <%--            +'</div>'--%>
+    <%--    }--%>
+
+    <%--    banner.append(text);--%>
+    <%--}--%>
+</script>
+
 </html>

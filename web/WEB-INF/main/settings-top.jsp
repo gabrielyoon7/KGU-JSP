@@ -8,12 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <head>
-
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+
+    <%--    ckeditor    --%>
+    <script src="//cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
 
     <title>Education Meeting HTML5 Template</title>
 

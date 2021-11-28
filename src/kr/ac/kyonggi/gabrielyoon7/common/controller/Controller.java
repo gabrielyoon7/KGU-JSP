@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Properties;
 
 public class Controller extends HttpServlet {
@@ -36,7 +37,16 @@ public class Controller extends HttpServlet {
             ex.printStackTrace();
         }
         if(forward != null){
-            request.getRequestDispatcher("WEB-INF/" + forward).forward(request, response);
+            if(forward.contains(".jsp"))
+            {
+                request.getRequestDispatcher("WEB-INF/" + forward).forward(request, response);
+            }
+            else {
+                PrintWriter pr = response.getWriter();
+                pr.print(forward);
+                pr.flush();
+                pr.close();
+            }
         }
     }
 }
