@@ -33,17 +33,15 @@
                         <h2>AI컴퓨터공학부 201713919 윤주현입니다</h2>
                         <p>
                             기존 <a rel="nofollow" href="http://cs.kyonggi.ac.kr:8080" target="_blank">학과 홈페이지</a>
-                            를 관리하면서 문제라고 생각되던 구조를 대폭 개선하여
+                            를 관리하면서 문제라고 생각되던 구조를 대폭 개선하여 처음부터 재설계를 해봤습니다.
                             <br>
-                            처음부터 재설계를 해봤습니다.
+                            프로젝트 유지보수를 하면서 느꼈던 근본적인 문제를 해결하기 위해 구조에 관련된 코드를 모조리 처음부터 다시 설계했습니다.
                             <br>
-                            프로젝트 관리를 하면서 느꼈던 근본적인 문제를 해결하기 위해 기존 기능을 유지하되,
-                            <br>
-                            기능 동작에 관련된 코드를 모조리 다시 설계했습니다.
+                            단, 프로젝트 규모 상 구조 개선과 직접적인 연관이 되는 기능만 컨셉을 일부 구현하고 연관이 없는 기능은 생략했습니다.
                         </p>
                         <div class="main-button-red">
-                            <div class="scroll-to-section"><a href="https://github.com/gabrielyoon7/KGU-JSP-201713919">Github
-                                Repository로 이동하기</a></div>
+                            <a href="https://github.com/gabrielyoon7/KGU-JSP-201713919"><div class="scroll-to-section">Github
+                                Repository로 이동하기</div></a>
                         </div>
                     </div>
                 </div>
@@ -65,8 +63,7 @@
                             </div>
                             <div class="down-content">
                                 <h4>SWAIG 홈페이지</h4>
-                                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
-                                    vestibulum.</p>
+                                <p>SWAIG(SW·AI Growing) 홈페이지</p>
                             </div>
                         </div>
                     </a>
@@ -77,8 +74,7 @@
                             </div>
                             <div class="down-content">
                                 <h4>KUTIS</h4>
-                                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
-                                    vestibulum.</p>
+                                <p>경기대학교 종합정보서비스</p>
                             </div>
                         </div>
                     </a>
@@ -88,9 +84,8 @@
                                 <img src="/assets/images/service-icon-03.png" alt="">
                             </div>
                             <div class="down-content">
-                                <h4>LMS</h4>
-                                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
-                                    vestibulum.</p>
+                                <h4>경기대 LMS</h4>
+                                <p>경기대학교 학습 관리 시스템</p>
                             </div>
                         </div>
                     </a>
@@ -101,8 +96,7 @@
                             </div>
                             <div class="down-content">
                                 <h4>Facebook</h4>
-                                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
-                                    vestibulum.</p>
+                                <p>AI컴퓨터공학부 공식 페이스북</p>
                             </div>
                         </div>
                     </a>
@@ -113,8 +107,7 @@
                             </div>
                             <div class="down-content">
                                 <h4>소프트웨어중심대학사업단</h4>
-                                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
-                                    vestibulum.</p>
+                                <p>소프트웨어중심대학 홈페이지</p>
                             </div>
                         </div>
                     </a>
@@ -125,8 +118,7 @@
                             </div>
                             <div class="down-content">
                                 <h4>콘텐츠융합소프트웨어연구소</h4>
-                                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non
-                                    vestibulum.</p>
+                                <p>경기대학교 콘텐츠융합소프트웨어 연구소</p>
                             </div>
                         </div>
                     </a>
@@ -174,12 +166,45 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="categories m-0">
-                    영역1
+                    <ul class="nav nav-tabs" id="myTab1" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab1" data-bs-toggle="tab" data-bs-target="#home1" type="button" role="tab" aria-controls="home" aria-selected="true">학과공지</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab1" data-bs-toggle="tab" data-bs-target="#profile1" type="button" role="tab" aria-controls="profile" aria-selected="false">수업공지</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab1" data-bs-toggle="tab" data-bs-target="#contact1" type="button" role="tab" aria-controls="contact" aria-selected="false">취업공지</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent1">
+                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab1">
+                            <div>게시글1</div>
+                            <div>게시글2</div>
+                        </div>
+                        <div class="tab-pane fade" id="profile1" role="tabpanel" aria-labelledby="profile-tab1">2</div>
+                        <div class="tab-pane fade" id="contact1" role="tabpanel" aria-labelledby="contact-tab1">3</div>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="categories m-0">
-                    영역2
+                    <ul class="nav nav-tabs" id="2" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab2" data-bs-toggle="tab" data-bs-target="#home2" type="button" role="tab" aria-controls="home" aria-selected="true">학과소식</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab2" data-bs-toggle="tab" data-bs-target="#profile2" type="button" role="tab" aria-controls="profile" aria-selected="false">우수작품전</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab2" data-bs-toggle="tab" data-bs-target="#contact2" type="button" role="tab" aria-controls="contact" aria-selected="false">수상소식</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent2">
+                        <div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab2">1</div>
+                        <div class="tab-pane fade" id="profile2" role="tabpanel" aria-labelledby="profile-tab2">2</div>
+                        <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact-tab2">3</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -193,21 +218,19 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="item">
-                            <h3>APPLY FOR BACHELOR DEGREE</h3>
-                            <p>You are allowed to use this edu meeting CSS template for your school or university or
-                                business. You can feel free to modify or edit this layout.</p>
+                            <h3>경기대학교에 오신 것을 환영합니다.</h3>
+                            <p>경기도 수원시 영통구 광교산로와 서울특별시 서대문구 경기대로에 위치한 사립종합대학입니다.</p>
                             <div class="main-button-red">
-                                <div class="scroll-to-section"><a class="major-color" href="#">Join Us Now!</a></div>
+                                <div class="scroll-to-section"><a class="major-color" href="#">입학처 바로가기</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="item">
-                            <h3>APPLY FOR BACHELOR DEGREE</h3>
-                            <p>You are not allowed to redistribute the template ZIP file on any other template website.
-                                Please contact us for more information.</p>
+                            <h3>소프트웨어경영대학 AI컴퓨터공학부</h3>
+                            <p>컴퓨터과학과가 1980년도에 문을 연지 벌써 30년이 되었습니다. 그동안 2300여명의 졸업생을 배출하면서 컴퓨터 관련 전공으로는 규모가 전국에서 몇 손가락 안에 드는 학과가 되었습니다. 우리 학과는 열 한 분의 교수님들과 400여 명의 학생들이 우의와 신뢰로 배움과 가르침에 매진하고 있습니다.</p>
                             <div class="main-button-yellow">
-                                <div class="scroll-to-section"><a class="major-color" href="#">Join Us Now!</a></div>
+                                <div class="scroll-to-section"><a class="major-color" href="#">오시는 길</a></div>
                             </div>
                         </div>
                     </div>
@@ -217,71 +240,58 @@
                 <div class="accordions is-first-expanded">
                     <article class="accordion">
                         <div class="accordion-head">
-                            <span>About Edu Meeting HTML Template</span>
+                            <span>AI컴퓨터공학부</span>
                             <span class="icon">
                         <i class="icon fa fa-chevron-right"></i>
                     </span>
                         </div>
                         <div class="accordion-body">
                             <div class="content">
-                                <p>If you want to get the latest collection of HTML CSS templates for your websites, you
-                                    may visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">Too CSS
-                                        website</a>. If you need a working contact form script, please visit <a
-                                            href="https://templatemo.com/contact" target="_parent">our contact page</a>
-                                    for more info.</p>
+                                <p>컴퓨터과학과는 최고수준의 개인용 컴퓨터와 프로젝터 환경을 갖춘 4개의 실습실을 보유하고 있으며, 반 이상의 수업이 실습실에서 진행됩니다. 또한 팀프로젝트 진행을 위한 회의 공간과 세미나실을 제공하여 활발한 커뮤니케이션을 통한 창의적 인재를 양성하는데 힘을 쏟고 있습니다.</p>
                             </div>
                         </div>
                     </article>
                     <article class="accordion">
                         <div class="accordion-head">
-                            <span>HTML CSS Bootstrap Layout</span>
+                            <span>학과소개</span>
                             <span class="icon">
                         <i class="icon fa fa-chevron-right"></i>
                     </span>
                         </div>
                         <div class="accordion-body">
                             <div class="content">
-                                <p>Etiam posuere metus orci, vel consectetur elit imperdiet eu. Cras ipsum magna,
-                                    maximus at semper sit amet, eleifend eget neque. Nunc facilisis quam purus, sed
-                                    vulputate augue interdum vitae. Aliquam a elit massa.<br><br>
-                                    Nulla malesuada elit lacus, ac ultricies massa varius sed. Etiam eu metus eget nibh
-                                    consequat aliquet. Proin fringilla, quam at euismod porttitor, odio odio tempus
-                                    ligula, ut feugiat ex erat nec mauris. Donec viverra velit eget lectus sollicitudin
-                                    tincidunt.</p>
+                                <p>컴퓨터와 소프트웨어는 4차 산업혁명의 시대에 사회의 모든 부분을 구성하고 담당하고 있습니다. 컴퓨터과학과는 이러한 컴퓨터와 소프트웨어를 다루는 능력을 교육하여 미래 지능형 사회를 이끌어갈 인재를 양성합니다. 정부와 기업, 가정, 사회와 개인 생활의 모든 분야에서 소프트웨어는 핵심적인 역할을 하고 있습니다. 소프트웨어 개발자는 이러한 소프트웨어를 개발하고 관리하고 운영하는 역할을 하는 미래 사회의 핵심 인력입니다.</p>
                             </div>
                         </div>
                     </article>
                     <article class="accordion">
                         <div class="accordion-head">
-                            <span>Please tell your friends</span>
+                            <span>수요 지향적 소프트웨어 엔지니어 양성</span>
                             <span class="icon">
                         <i class="icon fa fa-chevron-right"></i>
                     </span>
                         </div>
                         <div class="accordion-body">
                             <div class="content">
-                                <p>Ut vehicula mauris est, sed sodales justo rhoncus eu. Morbi porttitor quam velit, at
-                                    ullamcorper justo suscipit sit amet. Quisque at suscipit mi, non efficitur
-                                    velit.<br><br>
-                                    Cras et tortor semper, placerat eros sit amet, porta est. Mauris porttitor sapien et
-                                    quam volutpat luctus. Nullam sodales ipsum ac neque ultricies varius.</p>
+                                <p>- 컴퓨터 과학의 기본개념과 구성원리 이해
+                                    - 프로그래밍 능력과 도구의 활용 능력
+                                    - 수요지향적 기술의 습득과 실무능력 향상
+                                    - 다양한 분야와의 융·복합을 통한 새로운 소프트웨어 지식 창출</p>
                             </div>
                         </div>
                     </article>
                     <article class="accordion last-accordion">
                         <div class="accordion-head">
-                            <span>Share this to your colleagues</span>
+                            <span>국제적 경쟁력을 갖춘 글로벌 우수 인재 양성</span>
                             <span class="icon">
                         <i class="icon fa fa-chevron-right"></i>
                     </span>
                         </div>
                         <div class="accordion-body">
                             <div class="content">
-                                <p>Maecenas suscipit enim libero, vel lobortis justo condimentum id. Interdum et
-                                    malesuada fames ac ante ipsum primis in faucibus.<br><br>
-                                    Sed eleifend metus sit amet magna tristique, posuere laoreet arcu semper. Nulla
-                                    pellentesque ut tortor sit amet maximus. In eu libero ullamcorper, semper nisi quis,
-                                    convallis nisi.</p>
+                                <p>- 국제적인 수준의 프로그래밍 능력
+                                    - 국제적인 IT 관련 표준과 용어의 이해
+                                    - 국제적 표준을 이용한 설계 및 기술적 표현 능력 향상</p>
                             </div>
                         </div>
                     </article>
@@ -296,7 +306,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-heading">
-                    <h2>Our Popular Courses</h2>
+                    <h2>학부 주요 강좌 소개</h2>
                 </div>
             </div>
             <div class="col-lg-12">
@@ -304,7 +314,7 @@
                     <div class="item">
                         <img src="assets/images/course-01.jpg" alt="Course One">
                         <div class="down-content">
-                            <h4>Morbi tincidunt elit vitae justo rhoncus</h4>
+                            <h4>웹프로그래밍</h4>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-8">
@@ -317,7 +327,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-4">
-                                        <span>$160</span>
+                                        <span>1학기</span>
                                     </div>
                                 </div>
                             </div>
@@ -326,7 +336,7 @@
                     <div class="item">
                         <img src="assets/images/course-02.jpg" alt="Course Two">
                         <div class="down-content">
-                            <h4>Curabitur molestie dignissim purus vel</h4>
+                            <h4>지능웹설계</h4>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-8">
@@ -334,10 +344,12 @@
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
                                         </ul>
                                     </div>
                                     <div class="col-4">
-                                        <span>$180</span>
+                                        <span>2학기</span>
                                     </div>
                                 </div>
                             </div>
@@ -346,7 +358,7 @@
                     <div class="item">
                         <img src="assets/images/course-03.jpg" alt="">
                         <div class="down-content">
-                            <h4>Nulla at ipsum a mauris egestas tempor</h4>
+                            <h4>컴퓨터공학개별진로연구</h4>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-8">
@@ -355,10 +367,11 @@
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
                                         </ul>
                                     </div>
                                     <div class="col-4">
-                                        <span>$140</span>
+                                        <span>2학기</span>
                                     </div>
                                 </div>
                             </div>
@@ -367,7 +380,7 @@
                     <div class="item">
                         <img src="assets/images/course-04.jpg" alt="">
                         <div class="down-content">
-                            <h4>Aenean molestie quis libero gravida</h4>
+                            <h4>데이터마이닝</h4>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-8">
@@ -380,7 +393,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-4">
-                                        <span>$120</span>
+                                        <span>1학기</span>
                                     </div>
                                 </div>
                             </div>
@@ -389,7 +402,7 @@
                     <div class="item">
                         <img src="assets/images/course-01.jpg" alt="">
                         <div class="down-content">
-                            <h4>Lorem ipsum dolor sit amet adipiscing elit</h4>
+                            <h4>자료구조론</h4>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-8">
@@ -402,7 +415,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-4">
-                                        <span>$250</span>
+                                        <span>1학기</span>
                                     </div>
                                 </div>
                             </div>
@@ -411,7 +424,7 @@
                     <div class="item">
                         <img src="assets/images/course-02.jpg" alt="">
                         <div class="down-content">
-                            <h4>TemplateMo is the best website for Free CSS</h4>
+                            <h4>자바프로그래밍</h4>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-8">
@@ -424,7 +437,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-4">
-                                        <span>$270</span>
+                                        <span>1학기</span>
                                     </div>
                                 </div>
                             </div>
@@ -433,7 +446,7 @@
                     <div class="item">
                         <img src="assets/images/course-03.jpg" alt="">
                         <div class="down-content">
-                            <h4>Web Design Templates at your finger tips</h4>
+                            <h4>인공지능</h4>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-8">
@@ -446,7 +459,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-4">
-                                        <span>$340</span>
+                                        <span>1학기</span>
                                     </div>
                                 </div>
                             </div>
@@ -455,7 +468,7 @@
                     <div class="item">
                         <img src="assets/images/course-04.jpg" alt="">
                         <div class="down-content">
-                            <h4>Please visit our website again</h4>
+                            <h4>객체지향프로그래밍</h4>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-8">
@@ -468,7 +481,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-4">
-                                        <span>$360</span>
+                                        <span>2학기</span>
                                     </div>
                                 </div>
                             </div>
@@ -477,7 +490,7 @@
                     <div class="item">
                         <img src="assets/images/course-01.jpg" alt="">
                         <div class="down-content">
-                            <h4>Responsive HTML Templates for you</h4>
+                            <h4>데이터베이스</h4>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-8">
@@ -490,7 +503,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-4">
-                                        <span>$400</span>
+                                        <span>2학기</span>
                                     </div>
                                 </div>
                             </div>
@@ -499,7 +512,7 @@
                     <div class="item">
                         <img src="assets/images/course-02.jpg" alt="">
                         <div class="down-content">
-                            <h4>Download Free CSS Layouts for your business</h4>
+                            <h4>머신러닝</h4>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-8">
@@ -512,7 +525,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-4">
-                                        <span>$430</span>
+                                        <span>2학기</span>
                                     </div>
                                 </div>
                             </div>
@@ -521,7 +534,7 @@
                     <div class="item">
                         <img src="assets/images/course-03.jpg" alt="">
                         <div class="down-content">
-                            <h4>Morbi in libero blandit lectus cursus</h4>
+                            <h4>분산및병렬처리</h4>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-8">
@@ -534,7 +547,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-4">
-                                        <span>$480</span>
+                                        <span>2학기</span>
                                     </div>
                                 </div>
                             </div>
@@ -543,7 +556,7 @@
                     <div class="item">
                         <img src="assets/images/course-04.jpg" alt="">
                         <div class="down-content">
-                            <h4>Curabitur molestie dignissim purus</h4>
+                            <h4>모바일프로그래밍</h4>
                             <div class="info">
                                 <div class="row">
                                     <div class="col-8">
@@ -556,7 +569,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-4">
-                                        <span>$560</span>
+                                        <span>2학기</span>
                                     </div>
                                 </div>
                             </div>
@@ -574,20 +587,20 @@
             <div class="col-lg-6">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2>A Few Facts About Our University</h2>
+                        <h2>2021년도 경기대학교 AI컴퓨터공학부 현황</h2>
                     </div>
                     <div class="col-lg-6">
                         <div class="row">
                             <div class="col-12">
                                 <div class="count-area-content percentage">
                                     <div class="count-digit">94</div>
-                                    <div class="count-title">Succesed Students</div>
+                                    <div class="count-title">취업률</div>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="count-area-content">
-                                    <div class="count-digit">126</div>
-                                    <div class="count-title">Current Teachers</div>
+                                    <div class="count-digit">500명</div>
+                                    <div class="count-title">재학생</div>
                                 </div>
                             </div>
                         </div>
@@ -596,14 +609,14 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="count-area-content new-students">
-                                    <div class="count-digit">2345</div>
-                                    <div class="count-title">New Students</div>
+                                    <div class="count-digit">1234억원</div>
+                                    <div class="count-title">예산</div>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="count-area-content">
-                                    <div class="count-digit">32</div>
-                                    <div class="count-title">Awards</div>
+                                    <div class="count-digit">32개</div>
+                                    <div class="count-title">수상실적</div>
                                 </div>
                             </div>
                         </div>
@@ -626,62 +639,51 @@
             <div class="col-lg-9 align-self-center">
                 <div class="row">
                     <div class="col-lg-12">
-                        <form id="contact" action="" method="post">
+<%--                        <form id="contact" action="" method="post">--%>
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <h2>Let's get in touch</h2>
-                                </div>
-                                <div class="col-lg-4">
-                                    <fieldset>
-                                        <input name="name" type="text" id="name" placeholder="YOURNAME...*" required="">
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-4">
-                                    <fieldset>
-                                        <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*"
-                                               placeholder="YOUR EMAIL..." required="">
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-4">
-                                    <fieldset>
-                                        <input name="subject" type="text" id="subject" placeholder="SUBJECT...*"
-                                               required="">
-                                    </fieldset>
+                                    <h2>찾아오시는 길</h2>
                                 </div>
                                 <div class="col-lg-12">
-                                    <fieldset>
-                                        <textarea name="message" type="text" class="form-control" id="message"
-                                                  placeholder="YOUR MESSAGE..." required=""></textarea>
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
-                                    </fieldset>
+                                    <div id="map"></div><br>
+                                    <script>
+                                        function initMap() {
+                                            var map = new google.maps.Map(document.getElementById('map'), {
+                                                center: {lat: 37.30069004788188, lng: 127.03655392727285},
+                                                zoom: 16
+                                            });
+                                            var marker = new google.maps.Marker({
+                                                position: {lat: 37.30069004788188, lng: 127.03655392727285},
+                                                map: map
+                                            });
+                                        }
+                                    </script>
+                                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqeRrYz4_XJFY_vA9aqDbIiuU_Zs5odVA&callback=initMap"
+                                            async defer></script>
                                 </div>
                             </div>
-                        </form>
+<%--                        </form>--%>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="right-info">
+                <div class="major-color">
                     <ul>
                         <li>
-                            <h6>Phone Number</h6>
-                            <span>010-020-0340</span>
+                            <h6>연락처</h6>
+                            <span>031-249-9670</span>
                         </li>
                         <li>
-                            <h6>Email Address</h6>
-                            <span>info@meeting.edu</span>
+                            <h6>이메일</h6>
+                            <span>aics8305@kyonggi.ac.kr</span>
                         </li>
                         <li>
-                            <h6>Street Address</h6>
-                            <span>Rio de Janeiro - RJ, 22795-008, Brazil</span>
+                            <h6>주소</h6>
+                            <span>(16227) 경기도 수원시 영통구 광교산로 154-42 육영관 8304호</span>
                         </li>
                         <li>
-                            <h6>Website URL</h6>
-                            <span>www.meeting.edu</span>
+                            <h6>홈페이지 주소</h6>
+                            <span>http://cs.kyonggi.ac.kr</span>
                         </li>
                     </ul>
                 </div>
@@ -775,5 +777,10 @@
     <%--    banner.append(text);--%>
     <%--}--%>
 </script>
-
+<style>
+    #map{
+        height: 400px;
+        width: 100%;
+    }
+</style>
 </html>
