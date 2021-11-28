@@ -104,6 +104,12 @@ INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(60, 6
 INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(61, 6, 1, 'information.kgu', '우수 작품전');
 INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(62, 6, 2, 'information.kgu', '수상 소식');
 
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(90, 9, 0, 'admin.kgu', '관리자 메인');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(91, 9, 1, 'admin.kgu', '하위 전공 관리');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(92, 9, 2, 'admin.kgu', '회원 관리');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(93, 9, 3, 'admin.kgu', '슬라이드 관리');
+
+
 CREATE TABLE banner(
                        `id` INT(10) NOT NULL AUTO_INCREMENT,
                        `title` VARCHAR(100) DEFAULT NULL,
