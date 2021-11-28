@@ -135,7 +135,7 @@
         }
         else {
             if(user.type=='관리자'){
-                temp = '<a class="ms-2" href="admin.kgu">관리 페이지</a>';
+                temp = '<a class="ms-2" href="admin.kgu?num=90">관리 페이지</a>';
             }
             else{
                 temp = '<a class="ms-2" href="mypage.kgu">마이 페이지</a>';
