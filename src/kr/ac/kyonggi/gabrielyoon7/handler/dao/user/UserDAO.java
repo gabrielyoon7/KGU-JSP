@@ -3,6 +3,7 @@ package kr.ac.kyonggi.gabrielyoon7.handler.dao.user;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import kr.ac.kyonggi.gabrielyoon7.common.sql.Config;
+import kr.ac.kyonggi.gabrielyoon7.handler.dto.main.SliderDTO;
 import kr.ac.kyonggi.gabrielyoon7.handler.dto.user.UserDTO;
 import org.apache.commons.dbutils.DbUtils;
 import org.apache.commons.dbutils.QueryRunner;
@@ -69,6 +70,22 @@ public class UserDAO {
         }
         else
             return null;
+    }
+
+    public ArrayList<UserDTO> getUser() {
+        List<Map<String, Object>> listOfMaps = null;
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            listOfMaps = queryRunner.query(conn, "SELECT * FROM user;", new MapListHandler());
+        } catch (SQLException se) {
+            se.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+        Gson gson = new Gson();
+        ArrayList<UserDTO> selectedList = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<UserDTO>>() {}.getType());
+        return selectedList;
     }
 
     public void addUser(String text) {

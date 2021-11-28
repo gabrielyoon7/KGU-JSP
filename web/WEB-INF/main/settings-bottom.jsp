@@ -19,6 +19,11 @@
 <script src="/assets/js/video.js"></script>
 <script src="/assets/js/slick-slider.js"></script>
 <%--<script src="/assets/js/custom.js"></script>--%>
+
+<%--    Bootstrap Table--%>
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+<script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+
 <script>
     //according to loftblog tut
     $('.nav li:first').addClass('active');

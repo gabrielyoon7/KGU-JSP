@@ -59,6 +59,9 @@
         <c:when test="${jsp == '\"admin_user\"'}">
             <%@include file="/WEB-INF/page/admin/admin_user.jsp" %>
         </c:when>
+        <c:when test="${jsp == '\"admin_major\"'}">
+            <%@include file="/WEB-INF/page/admin/admin_major.jsp" %>
+        </c:when>
 
 
         <c:otherwise>
@@ -115,7 +118,7 @@
         for(let j = 0 ; j < menuPages.length; j++){
             if(menuPages[j].tab_id == tab_id){
                 text+='<a class="text-black border-top border-bottom" href="'+menuPages[j].page_path+'?major='+major+'&num='+menuPages[j].page_id+'">'
-                    +'<div class="d-flex w-100 py-2"><h4>● '+menuPages[j].page_title+'</h4></div>'
+                    +'<div class="d-flex w-100 py-2"><h5>● '+menuPages[j].page_title+'</h5></div>'
                     +'</a>';
             }
         }
