@@ -11,9 +11,7 @@
     <div class="row">
         <div class="col-md-3">
             <div class="meeting-single-item">
-                <div class="card" id="sideMenu">
-                    dd
-                </div>
+                <div class="card" id="sideMenu"></div>
             </div>
         </div>
         <div class="col-lg-9">
@@ -26,21 +24,3 @@
     </div>
 </div>
 
-<script>
-    $(document).ready(function () {
-        makeSidePageMenu();
-    })
-
-    function makeSidePageMenu(){
-        let menuPages =  <%=menuPages%>;
-        let sideMenu = $('#sideMenu');
-        let text='';
-        for(let j = 0 ; j < menuPages.length; j++){
-            if(menuPages[j].tab_id ==menuTabs[i].tab_id){
-                text+='<li><a href="'+menuPages[j].page_path+'?major='+major+'&num='+menuPages[j].page_id+'">'+menuPages[j].page_title+'</a></li>';
-            }
-        }
-        sideMenu.append(text);
-    }
-
-</script>

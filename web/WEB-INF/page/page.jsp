@@ -99,4 +99,29 @@
     })
 
 </script>
+
+<script>
+    $(document).ready(function () {
+        makeSidePageMenu();
+    })
+
+    function makeSidePageMenu(){
+        let menuPages =  <%=menuPages%>;
+        let sideMenu = $('#sideMenu');
+        let text='<div class="list-group ">';
+        let major = <%=major%>;
+        let num = <%=num%>;
+        let tab_id = parseInt(num)/10;
+        for(let j = 0 ; j < menuPages.length; j++){
+            if(menuPages[j].tab_id == tab_id){
+                text+='<a class="text-black border-top border-bottom" href="'+menuPages[j].page_path+'?major='+major+'&num='+menuPages[j].page_id+'">'
+                    +'<div class="d-flex w-100 py-2"><h4>● '+menuPages[j].page_title+'</h4></div>'
+                    +'</a>';
+            }
+        }
+        text+='</div>'
+        sideMenu.append(text);
+    }
+
+</script>
 </html>
