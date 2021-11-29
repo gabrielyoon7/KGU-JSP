@@ -16,7 +16,7 @@
         <div class="col-lg-9">
             <div class="meeting-single-item">
                 <div class="card">
-                    관리 메인 페이지 (설명이 올 자리)
+                    기존에 있던 기능 외에 새롭게 제안하는 기능의 컨셉입니다.
                 </div>
             </div>
         </div>

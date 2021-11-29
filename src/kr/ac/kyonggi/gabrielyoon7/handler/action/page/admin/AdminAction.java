@@ -2,6 +2,7 @@ package kr.ac.kyonggi.gabrielyoon7.handler.action.page.admin;
 
 import com.google.gson.Gson;
 import kr.ac.kyonggi.gabrielyoon7.common.controller.CommonAction;
+import kr.ac.kyonggi.gabrielyoon7.handler.dao.main.HomeDAO;
 import kr.ac.kyonggi.gabrielyoon7.handler.dao.user.UserDAO;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +24,7 @@ public class AdminAction extends CommonAction {
             return "main/sorry.jsp";
         }
         else if (num.equals("93")){
+            request.setAttribute("slideList", gson.toJson(HomeDAO.getInstance().getSlider()));
             request.setAttribute("jsp", gson.toJson("admin_slider"));
         }
         else {

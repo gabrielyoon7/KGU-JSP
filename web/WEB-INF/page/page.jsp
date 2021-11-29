@@ -74,13 +74,26 @@
 
     <%@include file="/WEB-INF/main/footer.jsp" %>
 </section>
+<!-- Modal start-->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" id="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+            <div class="modal-footer" id="modal-footer"></div>
+        </div>
+    </div>
+</div>
+<%-- Modal end--%>
 <%@include file="/WEB-INF/main/settings-bottom.jsp" %>
 </body>
 <script>
     function makeSection() {
         let num = <%=num%>;
         let tab_id = num.slice(0, -1);
-        console.log(tab_id);
+        // console.log(tab_id);
         let menuTabs =  <%=menuTabs%>;
         let menuPages =  <%=menuPages%>;
         let section = $('#sectionTitles');
@@ -117,8 +130,11 @@
         let text='<div class="list-group ">';
         let major = <%=major%>;
         let num = <%=num%>;
-        let tab_id = parseInt(num)/10;
+        let tab_id = parseInt(parseInt(num)/10);
         for(let j = 0 ; j < menuPages.length; j++){
+            // console.log(menuPages[j].tab_id);
+            // console.log(tab_id);
+
             if(menuPages[j].tab_id == tab_id){
                 text+='<a class="text-black border-top border-bottom" href="'+menuPages[j].page_path+'?major='+major+'&num='+menuPages[j].page_id+'">'
                     +'<div class="d-flex w-100 py-2"><h5>● '+menuPages[j].page_title+'</h5></div>'
@@ -126,6 +142,7 @@
             }
         }
         text+='</div>'
+        console.log(text);
         sideMenu.append(text);
     }
 

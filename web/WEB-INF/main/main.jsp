@@ -182,7 +182,7 @@
                             <%
                                 for(int i=0; i<10; i++){
                             %>
-                            <a href="bbs.kgu?mode=read">
+                            <a href='bbs.kgu?major=<%=major%>&num=41&mode=read'>
                                 <div class="d-flex justify-content-between my-2">
                                     <div class="index_post_link">탭1에 대한 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 </div>
                                     <div class="bbs-date ms-2">2021-11-29</div>
