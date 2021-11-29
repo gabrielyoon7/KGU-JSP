@@ -587,7 +587,7 @@
             <div class="col-lg-6">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2>2021년도 경기대학교 AI컴퓨터공학부 현황</h2>
+                        <h2>2021년도 경기대학교<br>AI컴퓨터공학부 현황</h2>
                     </div>
                     <div class="col-lg-6">
                         <div class="row">
@@ -615,7 +615,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="count-area-content">
-                                    <div class="count-digit">32개</div>
+                                    <div class="count-digit">234개</div>
                                     <div class="count-title">수상실적</div>
                                 </div>
                             </div>
@@ -639,7 +639,7 @@
             <div class="col-lg-9 align-self-center">
                 <div class="row">
                     <div class="col-lg-12">
-<%--                        <form id="contact" action="" method="post">--%>
+                        <form id="contact" action="" method="post">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <h2>찾아오시는 길</h2>
@@ -662,12 +662,12 @@
                                             async defer></script>
                                 </div>
                             </div>
-<%--                        </form>--%>
+                        </form>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="major-color">
+                <div class="right-info major-color">
                     <ul>
                         <li>
                             <h6>연락처</h6>

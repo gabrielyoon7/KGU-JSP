@@ -54,13 +54,13 @@
 
         <%--            admin--%>
         <c:when test="${jsp == '\"adminLoginPage\"'}">
-            <%@include file="/WEB-INF/page/account/adminLoginPage.jsp" %>
-        </c:when>
-        <c:when test="${jsp == '\"admin_user\"'}">
-            <%@include file="/WEB-INF/page/admin/admin_user.jsp" %>
+            <%@include file="/WEB-INF/page/admin/adminLoginPage.jsp" %>
         </c:when>
         <c:when test="${jsp == '\"admin_major\"'}">
             <%@include file="/WEB-INF/page/admin/admin_major.jsp" %>
+        </c:when>
+        <c:when test="${jsp == '\"admin_major\"'}">
+            <%@include file="/WEB-INF/page/admin/admin_slider.jsp" %>
         </c:when>
 
 
