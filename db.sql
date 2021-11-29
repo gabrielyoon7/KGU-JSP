@@ -153,3 +153,15 @@ INSERT INTO information(id,major,description) VALUE(60, 'main', '학과 소식')
 INSERT INTO information(id,major,description) VALUE(61, 'main', '우수 작품전');
 INSERT INTO information(id,major,description) VALUE(62, 'main', '수상 소식');
 
+
+CREATE TABLE uploaded_file(
+                              `id` INT(10) NOT NULL AUTO_INCREMENT,
+                              `user_id` VARCHAR(100) NOT NULL,
+                              `uploadFile` VARCHAR(100) NOT NULL,
+                              `newFileName` VARCHAR(100) NOT NULL,
+                              `upload_time` DATE NOT NULL,
+                              `savePath` VARCHAR(100)  NOT NULL,
+                              `folder` VARCHAR(100)  NOT NULL,
+                              `uploaded` VARCHAR(10) NOT NULL DEFAULT 'false',
+                              PRIMARY KEY (`id`)
+);

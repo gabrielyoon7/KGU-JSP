@@ -2,6 +2,7 @@ package kr.ac.kyonggi.gabrielyoon7.handler.action;
 
 import com.google.gson.Gson;
 import kr.ac.kyonggi.gabrielyoon7.common.controller.Action;
+import kr.ac.kyonggi.gabrielyoon7.handler.dao.main.AdminDAO;
 import kr.ac.kyonggi.gabrielyoon7.handler.dao.main.InformationDAO;
 import kr.ac.kyonggi.gabrielyoon7.handler.dto.user.UserDTO;
 import kr.ac.kyonggi.gabrielyoon7.handler.dto.user.UserTypeDTO;
@@ -24,6 +25,12 @@ public class AjaxAction implements Action {
         switch (req) {
             case "modifyText":
                 result = InformationDAO.getInstance().modifyText(data);
+                break;
+            case "deleteSlider":
+                result= AdminDAO.getInstance().deleteSlider(data);
+                break;
+            case "insertSlider":
+                result=AdminDAO.getInstance().addSlider(data);
                 break;
         }
 //        System.out.println(result);

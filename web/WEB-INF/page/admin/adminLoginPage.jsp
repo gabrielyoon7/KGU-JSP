@@ -17,12 +17,12 @@
                         <div class="" style="width: 450px;">
                             <form method="POST" action="adminLogin.kgu" id="login_form">
                                 <h1 class="h3 mb-3 fw-normal">관리자 로그인</h1>
-                                <div class="form-floating">
+                                <div class="form-floating mb-3">
                                     <input type="text" class="form-control" name="id" id="id" placeholder="아이디를 입력하세요">
                                     <label for="id">아이디</label>
                                     <input type="submit" style="display:none">
                                 </div>
-                                <div class="form-floating">
+                                <div class="form-floating mb-3">
                                     <input type="password" class="form-control" name="password" id="password"
                                            placeholder="비밀번호를 입력하세요">
                                     <label for="password">비밀번호</label>
