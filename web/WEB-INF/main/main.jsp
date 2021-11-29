@@ -179,8 +179,18 @@
                     </ul>
                     <div class="tab-content" id="myTabContent1">
                         <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab1">
-                            <div>게시글1</div>
-                            <div>게시글2</div>
+                            <%
+                                for(int i=0; i<10; i++){
+                            %>
+                            <a href="bbs.kgu?mode=read">
+                                <div class="d-flex justify-content-between my-2">
+                                    <div class="index_post_link">탭1에 대한 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 </div>
+                                    <div class="bbs-date ms-2">2021-11-29</div>
+                                </div>
+                            </a>
+                            <%
+                                }
+                            %>
                         </div>
                         <div class="tab-pane fade" id="profile1" role="tabpanel" aria-labelledby="profile-tab1">2</div>
                         <div class="tab-pane fade" id="contact1" role="tabpanel" aria-labelledby="contact-tab1">3</div>
@@ -781,6 +791,16 @@
     #map{
         height: 400px;
         width: 100%;
+    }
+    .bbs-date{
+        width: 100px;
+        min-width: 100px;
+    }
+    .index_post_link{
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 </style>
 </html>

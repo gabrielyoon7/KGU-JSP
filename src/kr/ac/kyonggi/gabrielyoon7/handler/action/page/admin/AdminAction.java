@@ -14,9 +14,15 @@ public class AdminAction extends CommonAction {
         Gson gson = new Gson();
         String num= request.getParameter("num"); //현재 페이지의 num을 전달받음
         if(num.equals("90")){
-            request.setAttribute("jsp", gson.toJson("admin_major"));
+            request.setAttribute("jsp", gson.toJson("admin_main"));
         }
         else if (num.equals("91")){
+            request.setAttribute("jsp", gson.toJson("admin_major"));
+        }
+        else if (num.equals("92")){
+            return "main/sorry.jsp";
+        }
+        else if (num.equals("93")){
             request.setAttribute("jsp", gson.toJson("admin_slider"));
         }
         else {
