@@ -18,22 +18,18 @@
         </div>
         <div class="col-lg-9">
             <div class="meeting-single-item">
-<%--                <div class="meeting-single-item">--%>
-<%--                    <div class="card">--%>
-                        <div class="row " id="slideList">
-                            <div class="col-lg-4 templatemo-item-col">
-                                <div class="meeting-item">
-                                    <div class="card text-center bg-secondary">
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#staticBackdrop" onclick="makeSlideUploadModal()">슬라이드 추가
-                                        </button>
-                                    </div>
-                                </div>
+                <div class="row " id="slideList">
+                    <div class="col-lg-4 templatemo-item-col">
+                        <div class="meeting-item">
+                            <div class="card text-center">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop" onclick="makeSlideUploadModal()">슬라이드 추가
+                                </button>
                             </div>
                         </div>
-<%--                    </div>--%>
-<%--                </div>--%>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -57,10 +53,10 @@
                 + '<div class="price">'
                 + '<span>' + slides[i].slider_major + '</span>'
                 + '</div>'
-                + '<a href="bbs.kgu?major='+major+'&num='+num+'mode=read"><img src="' + slides[i].slider_img + '" alt=""></a>'
+                + '<a href="bbs.kgu?major=' + major + '&num=' + num + 'mode=read"><img src="' + slides[i].slider_img + '" alt=""></a>'
                 + '</div>'
                 + '<div class="down-content">'
-                + '<button class="btn btn-danger" onclick="deleteSlide('+i+')">슬라이드 삭제</button>'
+                + '<button class="btn btn-danger" onclick="deleteSlide(' + i + ')">슬라이드 삭제</button>'
                 + '</div>'
                 + '</div>'
                 + '</div>'
@@ -77,7 +73,7 @@
 
                 let modalHeader = $('#modal-header');
                 let headerText = '<h5 class="modal-title" id="exampleModalLabel">대문 슬라이드 등록하기</h5>'
-                    +'<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
+                    + '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
                 modalHeader.html(headerText);
 
                 let modalBody = $('#modal-body');
@@ -85,18 +81,18 @@
                     + '<input type="file" name="uploadFile" id="uploadFile" accept="image/*">'
                     + '<button class="btn btn-secondary" onclick="uploadFile()">업로드</button>'
                     + '</div>';
-                bodyText+='<select class="form-select" id="major" name="major" aria-label="Floating label select example">'
-                for(let i = 0 ; i<majorList.length; i++){
-                    bodyText+='<option value="'+majorList[i].code+'">'+majorList[i].major+'</option>'
+                bodyText += '<select class="form-select" id="major" name="major" aria-label="Floating label select example">'
+                for (let i = 0; i < majorList.length; i++) {
+                    bodyText += '<option value="' + majorList[i].code + '">' + majorList[i].major + '</option>'
                 }
-                bodyText+='</select>'
+                bodyText += '</select>'
                 modalBody.html(bodyText);
 
                 let modalFooter = $('#modal-footer');
                 let footerText = '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button> <button type="button" class="btn btn-primary" onclick="insertSlider()">추가</button>';
                 modalFooter.html(footerText);
             }
-            })
+        })
     }
 
     let file_id; //나중에 파일 상세정보를 uploadedFile로부터 역참조 하고싶은 경우에 사용하라고 만들어둠 (다운로드에서 사용하는 기능)
@@ -151,7 +147,7 @@
             type: "post",
             data: {
                 req: "insertSlider", //이 메소드를 찾아서
-                data: slider_img+"-/-/-"+major //이 데이터를 파라미터로 넘겨줍니다.
+                data: slider_img + "-/-/-" + major //이 데이터를 파라미터로 넘겨줍니다.
             },
             success: function (data) { //성공 시
                 alert('대문이 정상적으로 추가되었습니다.');
@@ -167,24 +163,24 @@
 
         let check = confirm('정말로 삭제하시나요?');
         if (check) {
-                $.ajax({
-                    url: "ajax.kgu", //AjaxAction에서
-                    type: "post", //post 방식으로
-                    data: {
-                        req: "deleteSlider", //이 메소드를 찾아서
-                        data: slider_id //이 데이터를 파라미터로 넘겨줍니다.
-                    },
-                    success: function (data) { //성공 시
-                        if (data == 'success') {
-                            alert('해당 대문이 삭제되었습니다.');
-                            location.reload();
-                        } else {
-                            alert('삭제에 실패했습니다.')
-                        }
+            $.ajax({
+                url: "ajax.kgu", //AjaxAction에서
+                type: "post", //post 방식으로
+                data: {
+                    req: "deleteSlider", //이 메소드를 찾아서
+                    data: slider_id //이 데이터를 파라미터로 넘겨줍니다.
+                },
+                success: function (data) { //성공 시
+                    if (data == 'success') {
+                        alert('해당 대문이 삭제되었습니다.');
+                        location.reload();
+                    } else {
+                        alert('삭제에 실패했습니다.')
                     }
-                })
-            }
+                }
+            })
         }
+    }
 </script>
 <%--<style>--%>
 <%--    .footer p{--%>
