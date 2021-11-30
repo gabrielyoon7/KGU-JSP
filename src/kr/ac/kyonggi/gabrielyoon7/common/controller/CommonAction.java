@@ -41,6 +41,7 @@ public class CommonAction implements Action{
         request.setAttribute("major", gson.toJson(major));
         request.setAttribute("majorInfo", gson.toJson(HomeDAO.getInstance().getMajor(major))); //전공 별 홈페이지 설정에 관여
         request.setAttribute("majorAllInfo", gson.toJson(HomeDAO.getInstance().getAllMajor())); //다른 홈페이지로 바로갈 수 있도록 하는 설정에 관여
+//        request.setAttribute("majorList",gson.toJson(HomeDAO.getInstance().getMajorList()));
         return null;
     }
 }

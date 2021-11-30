@@ -67,7 +67,7 @@
             url: 'delete.kgu?fileId=' + file_id + '&&folder=' + file_folder,
             type: 'post',
             success: function (data) {//데이터는 주소
-                let majorList = <%=majorList%>;
+                let majorList = <%=majorAllInfo%>;
 
                 let modalHeader = $('#modal-header');
                 let headerText = '<h5 class="modal-title" id="exampleModalLabel">대문 슬라이드 등록하기</h5>'

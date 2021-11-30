@@ -11,7 +11,7 @@
     String google_name = (String) session.getAttribute("google_name");
     String google_email = (String) session.getAttribute("google_email");
     String google_imageUrl = (String) session.getAttribute("google_imageUrl");
-    String majorList = (String) request.getAttribute("majorList");
+//    String majorList = (String) request.getAttribute("majorList");
 %>
 <div class="container">
 
@@ -80,7 +80,7 @@
         makeMajorList();
     })
     function makeMajorList(){
-        let majorList = <%=majorList%>;
+        let majorList = <%=majorAllInfo%>;
         let major = $('#major');
         let text = '';
         for(let i = 0 ; i<majorList.length; i++){
