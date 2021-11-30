@@ -16,7 +16,7 @@
         <div class="col-lg-9">
             <div class="meeting-single-item">
                 <div class="card">
-                    전공 설정
+
                 </div>
             </div>
         </div>

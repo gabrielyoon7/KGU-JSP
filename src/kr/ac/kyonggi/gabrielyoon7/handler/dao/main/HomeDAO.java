@@ -41,6 +41,23 @@ public class HomeDAO {
         return selectedList;
     }
 
+    public ArrayList<SliderDTO> getMajorSlider(String major) {
+        List<Map<String, Object>> listOfMaps = null;
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            listOfMaps = queryRunner.query(conn, "SELECT * FROM slider WHERE slider_major=? ORDER BY id DESC", new MapListHandler(), major);
+        } catch (SQLException se) {
+            se.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+        Gson gson = new Gson();
+        ArrayList<SliderDTO> selectedList = gson.fromJson(gson.toJson(listOfMaps), new TypeToken<List<SliderDTO>>() {}.getType());
+        return selectedList;
+    }
+
+
     public ArrayList<BannerDTO> getBannerList() {
         List<Map<String, Object>> listOfMaps = null;
         Connection conn = Config.getInstance().sqlLogin();

@@ -178,22 +178,9 @@
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent1">
-                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab1">
-                            <%
-                                for(int i=0; i<10; i++){
-                            %>
-                            <a href='bbs.kgu?major=<%=major%>&num=41&mode=read'>
-                                <div class="d-flex justify-content-between my-2">
-                                    <div class="index_post_link">탭1에 대한 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 </div>
-                                    <div class="bbs-date ms-2">2021-11-29</div>
-                                </div>
-                            </a>
-                            <%
-                                }
-                            %>
-                        </div>
-                        <div class="tab-pane fade" id="profile1" role="tabpanel" aria-labelledby="profile-tab1">2</div>
-                        <div class="tab-pane fade" id="contact1" role="tabpanel" aria-labelledby="contact-tab1">3</div>
+                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab1"></div>
+                        <div class="tab-pane fade" id="profile1" role="tabpanel" aria-labelledby="profile-tab1"></div>
+                        <div class="tab-pane fade" id="contact1" role="tabpanel" aria-labelledby="contact-tab1"></div>
                     </div>
                 </div>
             </div>
@@ -211,9 +198,9 @@
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent2">
-                        <div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab2">1</div>
-                        <div class="tab-pane fade" id="profile2" role="tabpanel" aria-labelledby="profile-tab2">2</div>
-                        <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact-tab2">3</div>
+                        <div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab2"></div>
+                        <div class="tab-pane fade" id="profile2" role="tabpanel" aria-labelledby="profile-tab2"></div>
+                        <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact-tab2"></div>
                     </div>
                 </div>
             </div>
@@ -709,7 +696,23 @@
         makeCarouselCard();
         makeBackgroundColor();
         // makeBanner();
+        makeBBScard();
     })
+
+    function makeBBScard(){
+        let idList = ['#home','#profile','#contact'];
+        for (let i = 0 ; i<idList.length; i++){
+            for (let j = 1 ; j <= 2; j++){
+                let major = <%=major%>;
+                let id = $(idList[i]+''+j);
+                let text=''
+                for(let k = 0;  k < 10; k++){
+                    text+='<a href="bbs.kgu?major='+major+'&num=41&mode=read"> <div class="d-flex justify-content-between my-2"> <div class="index_post_link">'+idList[i]+j+k+' 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 게시글 제목 </div><div class="bbs-date ms-2">2021-11-29</div></div></a>';
+                }
+                id.append(text);
+            }
+        }
+    }
 
     function makeBackgroundColor(){
         let majorInfo = <%=majorInfo%>;

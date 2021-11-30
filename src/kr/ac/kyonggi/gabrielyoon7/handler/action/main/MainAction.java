@@ -14,7 +14,11 @@ public class MainAction extends CommonAction {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         super.execute(request,response);
         Gson gson = new Gson();
-        request.setAttribute("slider", gson.toJson(HomeDAO.getInstance().getSlider()));
+        String major = request.getParameter("major");
+        if(major==null){
+            major="main";
+        }
+        request.setAttribute("slider", gson.toJson(HomeDAO.getInstance().getMajorSlider(major)));
         request.setAttribute("bannerList",gson.toJson(HomeDAO.getInstance().getBannerList()));
         return "main/main.jsp";
     }

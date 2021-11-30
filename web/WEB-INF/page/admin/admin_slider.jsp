@@ -18,18 +18,22 @@
         </div>
         <div class="col-lg-9">
             <div class="meeting-single-item">
-                <div class="row grid" id="slideList">
-                    <div class="col-lg-4 templatemo-item-col">
-                        <div class="meeting-item">
-                            <div class="card text-center">
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop" onclick="makeSlideUploadModal()">슬라이드 추가
-                                </button>
+<%--                <div class="meeting-single-item">--%>
+<%--                    <div class="card">--%>
+                        <div class="row " id="slideList">
+                            <div class="col-lg-4 templatemo-item-col">
+                                <div class="meeting-item">
+                                    <div class="card text-center bg-secondary">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#staticBackdrop" onclick="makeSlideUploadModal()">슬라이드 추가
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+<%--                    </div>--%>
+<%--                </div>--%>
             </div>
         </div>
     </div>
@@ -43,6 +47,8 @@
     function makeSlideLists() {
         let card = $('#slideList');
         let text = '';
+        let major = <%=major%>;
+        let num = <%=num%>;
         let slides = <%=slideList%>;
         for (let i = 0; i < slides.length; i++) {
             text += '<div class="col-lg-4 templatemo-item-col">'
@@ -51,7 +57,7 @@
                 + '<div class="price">'
                 + '<span>' + slides[i].slider_major + '</span>'
                 + '</div>'
-                + '<a href="meeting-details.html"><img src="' + slides[i].slider_img + '" alt=""></a>'
+                + '<a href="bbs.kgu?major='+major+'&num='+num+'mode=read"><img src="' + slides[i].slider_img + '" alt=""></a>'
                 + '</div>'
                 + '<div class="down-content">'
                 + '<button class="btn btn-danger" onclick="deleteSlide('+i+')">슬라이드 삭제</button>'
@@ -138,13 +144,14 @@
 
     function insertSlider() {
         let slider_img = file_path;
+        let major = $('#major').val();
 
         $.ajax({
             url: "ajax.kgu", //AjaxAction에서
             type: "post",
             data: {
                 req: "insertSlider", //이 메소드를 찾아서
-                data: slider_img //이 데이터를 파라미터로 넘겨줍니다.
+                data: slider_img+"-/-/-"+major //이 데이터를 파라미터로 넘겨줍니다.
             },
             success: function (data) { //성공 시
                 alert('대문이 정상적으로 추가되었습니다.');
@@ -179,3 +186,12 @@
             }
         }
 </script>
+<%--<style>--%>
+<%--    .footer p{--%>
+<%--        color: black;--%>
+<%--    }--%>
+<%--    .footer p a{--%>
+<%--        color: black;--%>
+<%--    }--%>
+
+<%--</style>--%>

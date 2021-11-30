@@ -38,10 +38,11 @@ public class AdminDAO {
     public String addSlider(String data) {
         String arr[] = data.split("-/-/-"); // slider_img
         String slider_img = arr[0];
+        String major = arr[1];
         Connection conn = Config.getInstance().sqlLogin();
         try {
             QueryRunner queryRunner = new QueryRunner();
-            queryRunner.update(conn,"INSERT INTO slider(slider_img) VALUE(?);", slider_img);
+            queryRunner.update(conn,"INSERT INTO slider(slider_img,slider_major) VALUE(?,?);", slider_img,major);
         } catch(SQLException se) {
             se.printStackTrace();
         } finally {
