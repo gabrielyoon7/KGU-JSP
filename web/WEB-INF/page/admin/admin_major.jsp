@@ -90,7 +90,7 @@
         let color = $('#add_major_color').val();
 
         let data = code+'-/-/-'+major+'-/-/-'+color;
-
+        // alert(data);
         $.ajax({
             url: "ajax.kgu", //AjaxAction에서
             type: "post",

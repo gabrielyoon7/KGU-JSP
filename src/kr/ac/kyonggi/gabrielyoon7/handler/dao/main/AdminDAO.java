@@ -71,10 +71,11 @@ public class AdminDAO {
     public String deleteMajor(String data) {
         Connection conn = Config.getInstance().sqlLogin();
         try {
-            if(data!="1"){
+            if(!data.equals("1")){
                 QueryRunner queryRunner = new QueryRunner();
                 queryRunner.update(conn,"DELETE FROM major WHERE oid=?", data);
             }
+            return "fail";
         } catch(SQLException se) {
             se.printStackTrace();
         } finally {
