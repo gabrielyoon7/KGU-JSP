@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-lg-3">
             <div class="meeting-single-item">
                 <div class="card" id="sideMenu"></div>
             </div>
@@ -53,7 +53,9 @@
                 + '<a href="#"><div style="background-color: '+majors[i].color+'; height: 150px;"></div></a>'
                 + '</div>'
                 + '<div class="down-content">'
-                + '<button class="btn btn-danger" onclick="deleteSlide('+i+')">슬라이드 삭제</button>'
+                + '<div>'+majors[i].major+'</div>'
+                + '<button class="btn btn-danger" onclick="deleteMajor('+i+')">전공 삭제</button>'
+                // + '<button class="btn btn-primary" onclick="modifyMajor('+i+')">전공 수정</button>'
                 + '</div>'
                 + '</div>'
                 + '</div>'
@@ -107,5 +109,29 @@
             }
         })
     }
+    function deleteMajor(i) {
+        let majorList = <%=majorAllInfo%>;
+        let major = majorList[i];
+        let oid = major.oid;
 
+        let check = confirm('정말로 삭제하시나요?');
+        if (check) {
+            $.ajax({
+                url: "ajax.kgu", //AjaxAction에서
+                type: "post", //post 방식으로
+                data: {
+                    req: "deleteMajor", //이 메소드를 찾아서
+                    data: oid //이 데이터를 파라미터로 넘겨줍니다.
+                },
+                success: function (data) { //성공 시
+                    if (data == 'success') {
+                        alert('해당 전공이 삭제되었습니다.');
+                        location.reload();
+                    } else {
+                        alert('삭제에 실패했습니다.')
+                    }
+                }
+            })
+        }
+    }
 </script>

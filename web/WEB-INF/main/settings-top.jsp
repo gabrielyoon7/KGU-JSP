@@ -19,7 +19,7 @@
     <%--    ckeditor    --%>
     <script src="//cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
 
-    <title>Education Meeting HTML5 Template</title>
+    <title>경기대학교 AI컴퓨터공학부 V2</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

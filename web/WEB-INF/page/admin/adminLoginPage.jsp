@@ -32,6 +32,7 @@
                                 <div style="width: 100%">
                                     <input class="w-100 btn btn-lg btn-primary text-center"  type="submit" value="전송">
                                 </div>
+                                <div>관리자 아이디는 admin, 비밀번호는 admin1234입니다.</div>
                             </form>
                         </div>
                     </div>

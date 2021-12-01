@@ -67,4 +67,19 @@ public class AdminDAO {
         }
         return "success";
     }
+
+    public String deleteMajor(String data) {
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            if(data!="1"){
+                QueryRunner queryRunner = new QueryRunner();
+                queryRunner.update(conn,"DELETE FROM major WHERE oid=?", data);
+            }
+        } catch(SQLException se) {
+            se.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+        return "success";
+    }
 }

@@ -34,6 +34,8 @@ public class AjaxAction implements Action {
                 break;
             case "insertMajor":
                 result=AdminDAO.getInstance().addMajor(data);
+            case "deleteMajor":
+                result=AdminDAO.getInstance().deleteMajor(data);
         }
 //        System.out.println(result);
         return result;

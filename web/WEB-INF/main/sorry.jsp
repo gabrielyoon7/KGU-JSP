@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-SORRY
+<div><h2>SORRY!</h2></div>
+<div>이 페이지는 의도적으로 구현하지 않은 페이지 입니다. (기존 기능과 동일하여 구현하지 않음)</div>
 </body>
 </html>

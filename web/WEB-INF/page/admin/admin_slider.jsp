@@ -11,7 +11,7 @@
 %>
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-lg-3">
             <div class="meeting-single-item">
                 <div class="card" id="sideMenu"></div>
             </div>
@@ -100,8 +100,6 @@
     let file_path; //파일이 업로드된 상대경로
 
     function uploadFile() {
-
-
         let formData = new FormData();
         let folder = '/uploaded/slider';//업로드 된 파일 folder 경로 설정은 여기에서 해줍니다. (마지막에 /가 오면 절대 안됩니다.)
         if ($('input[name=uploadFile]')[0].files[0] != null) {
