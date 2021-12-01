@@ -32,15 +32,10 @@
                     <div class="caption">
                         <fmt:setLocale value='<%=request.getParameter("language")%>' />
                         <fmt:bundle basename="kr.ac.kyonggi.gabrielyoon7.bundle.myBundle">
-                        <h6>안녕하세요</h6>
-                        <h2>AI컴퓨터공학부 201713919 윤주현입니다</h2>
+                        <h6><fmt:message key="hi"/></h6>
+                        <h2><fmt:message key="introduce"/></h2>
                         <p>
-                            기존 <a rel="nofollow" href="http://cs.kyonggi.ac.kr:8080" target="_blank">학과 홈페이지</a>
-                            를 관리하면서 문제라고 생각되던 구조를 대폭 개선하여 처음부터 재설계를 해봤습니다.
-                            <br>
-                            프로젝트 유지보수를 하면서 느꼈던 근본적인 문제를 해결하기 위해 구조에 관련된 코드를 모조리 처음부터 다시 설계했습니다.
-                            <br>
-                            단, 프로젝트 규모 상 구조 개선과 직접적인 연관이 되는 기능만 컨셉을 일부 구현하고 연관이 없는 기능은 생략했습니다.
+                            <fmt:message key="description"/>
                             <a href="?language=ko">한국어</a>|<a href="?language=en">English</a>
                         </p>
                         <div class="main-button-red">
