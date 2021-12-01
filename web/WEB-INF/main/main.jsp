@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%
     String slider = (String) request.getAttribute("slider");
 //    String bannerList = (String) request.getAttribute("bannerList");
@@ -29,6 +30,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="caption">
+                        <fmt:setLocale value='<%=request.getParameter("language")%>' />
+                        <fmt:bundle basename="kr.ac.kyonggi.gabrielyoon7.bundle.myBundle">
                         <h6>안녕하세요</h6>
                         <h2>AI컴퓨터공학부 201713919 윤주현입니다</h2>
                         <p>
@@ -38,11 +41,14 @@
                             프로젝트 유지보수를 하면서 느꼈던 근본적인 문제를 해결하기 위해 구조에 관련된 코드를 모조리 처음부터 다시 설계했습니다.
                             <br>
                             단, 프로젝트 규모 상 구조 개선과 직접적인 연관이 되는 기능만 컨셉을 일부 구현하고 연관이 없는 기능은 생략했습니다.
+                            <a href="?language=ko">한국어</a>|<a href="?language=en">English</a>
                         </p>
                         <div class="main-button-red">
-                            <a href="https://github.com/gabrielyoon7/KGU-JSP-201713919"><div class="scroll-to-section">Github
-                                Repository로 이동하기</div></a>
+                            <a href="https://github.com/gabrielyoon7/KGU-JSP-201713919">
+                                <div class="scroll-to-section"><fmt:message key="git_repo"/></div>
+                            </a>
                         </div>
+                        </fmt:bundle>
                     </div>
                 </div>
             </div>

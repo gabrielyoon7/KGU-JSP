@@ -30,13 +30,17 @@
     })
     let information = <%=information%>;
     function makeInformation(){
+        let user = <%=user%>;
         let data = $('#information');
         if(information!=null){
             let text = '';
             text+=information.description;
-            let button = $('#modify_button');
-            button.append('<button class="btn btn-primary" onclick="modify()">수정</button>');
             data.prepend(text);
+
+            let button = $('#modify_button');
+            if(user.type == '관리자'){
+                button.append('<button class="btn btn-primary" onclick="modify()">수정</button>');
+            }
         }
     }
 
