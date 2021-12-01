@@ -95,14 +95,14 @@ INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(41, 4
 INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(42, 4, 2, 'bbs.kgu', '수업공지');
 INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(43, 4, 3, 'bbs.kgu', '취업공지');
 
-INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(50, 5, 0, 'information.kgu', '신청 및 접수');
-INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(51, 5, 1, 'information.kgu', '졸업논문');
-INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(52, 5, 2, 'information.kgu', '학과 자료실');
-INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(53, 5, 3, 'information.kgu', '사물함 신청');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(50, 5, 0, 'bbs.kgu', '신청 및 접수');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(51, 5, 1, 'bbs.kgu', '졸업논문');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(52, 5, 2, 'bbs.kgu', '학과 자료실');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(53, 5, 3, 'bbs.kgu', '사물함 신청');
 
-INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(60, 6, 0, 'information.kgu', '학과 소식');
-INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(61, 6, 1, 'information.kgu', '우수 작품전');
-INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(62, 6, 2, 'information.kgu', '수상 소식');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(60, 6, 0, 'bbs.kgu', '학과 소식');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(61, 6, 1, 'bbs.kgu', '우수 작품전');
+INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(62, 6, 2, 'bbs.kgu', '수상 소식');
 
 INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(90, 9, 0, 'admin.kgu', '관리자 메인');
 INSERT INTO menu_pages(page_id,tab_id,orderNum,page_path,page_title) VALUE(91, 9, 1, 'admin.kgu', '하위 전공 관리');

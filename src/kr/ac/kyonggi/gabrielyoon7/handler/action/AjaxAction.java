@@ -32,6 +32,8 @@ public class AjaxAction implements Action {
             case "insertSlider":
                 result=AdminDAO.getInstance().addSlider(data);
                 break;
+            case "insertMajor":
+                result=AdminDAO.getInstance().addMajor(data);
         }
 //        System.out.println(result);
         return result;

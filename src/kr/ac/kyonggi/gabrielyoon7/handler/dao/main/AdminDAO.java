@@ -50,4 +50,21 @@ public class AdminDAO {
         }
         return "success";
     }
+
+    public String addMajor(String data) {
+        String arr[] = data.split("-/-/-"); // slider_img
+        String code = arr[0];
+        String major = arr[1];
+        String color = arr[2];
+        Connection conn = Config.getInstance().sqlLogin();
+        try {
+            QueryRunner queryRunner = new QueryRunner();
+            queryRunner.update(conn,"INSERT INTO major(code, major, color) VALUE(?,?,?);", code,major,color);
+        } catch(SQLException se) {
+            se.printStackTrace();
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+        return "success";
+    }
 }
