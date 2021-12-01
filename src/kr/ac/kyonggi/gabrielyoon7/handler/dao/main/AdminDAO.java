@@ -75,7 +75,9 @@ public class AdminDAO {
                 QueryRunner queryRunner = new QueryRunner();
                 queryRunner.update(conn,"DELETE FROM major WHERE oid=?", data);
             }
-            return "fail";
+            else {
+                return "fail";
+            }
         } catch(SQLException se) {
             se.printStackTrace();
         } finally {
